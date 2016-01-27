@@ -115,3 +115,16 @@ Gradient Decent는 J=0, J=1일 때를 동시에 업데이트를 한다.
  그럼 \\( \alpha\\)값에 따라 gradient decent는 어떻게 변할까 alpha값이 너무 작으면 \\( \theta\\)의 값이 아주 조금씩 변할 것이다. \\( \alpha\\)의 값이 너무 크다면 overshooting이 일어나 아마 최소점을 찾지 못 할 수도 있다.
 
 
+## Gradient Descent for Linear Regression
+
+
+이제 비용함수를 최소화하기 위해 Gradient Decent 알고리즘을 사용해보자
+
+![apply](/assets/posts/MachineLearning/ml1-6.png)
+
+여기서 핵심이 되는 것은 Gradient Decent의 미분텀이다. 위 과정을 잘 정리하면 아래와 같이 나타낼 수 있다. [[참조]](http://math.stackexchange.com/questions/70728/partial-derivative-in-gradient-descent-for-two-variables/189792#189792)
+
+<div>
+\begin{align*} \text{repeat until convergence: } \lbrace & \\ \theta_0 := & \theta_0 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}(h_\theta(x^{(i)}) - y^{(i)}) \\ \theta_1 := & \theta_1 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}\left((h_\theta(x^{(i)}) - y^{(i)}) x^{(i)}\right) \\ \rbrace&\end{align*}
+</div>
+
