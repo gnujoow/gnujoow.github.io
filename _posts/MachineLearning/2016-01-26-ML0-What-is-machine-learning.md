@@ -1,4 +1,8 @@
-# What is machine learning?
+---
+layout: post
+title: ML0::What is Machine Learning
+---
+
 
 머신러닝이란 무엇일까? 우리는 모르고있지만 이미 일상 생활속에서 많이 사용하고 있다.
 
