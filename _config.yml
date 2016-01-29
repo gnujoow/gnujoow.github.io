@@ -20,7 +20,6 @@ author:
   url:            #https://twitter.com/mdo
 
 paginate:         5
-comments:		  true
 
 # Custom vars
 github:
