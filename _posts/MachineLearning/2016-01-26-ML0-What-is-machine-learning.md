@@ -76,7 +76,7 @@ Classification 문제를 예시를 들어 생각해보자. 우선 지도학습�
 
 ![예1](/assets/posts/MachineLearning/ml0-5.png)
 
-오늘 신문이다. 여러 신문사에서 같은 뉴스를 올렸는데 [구글뉴스](news.google.com)가 비슷한 뉴스끼리 묶어놓았다. 
+오늘 신문이다. 여러 신문사에서 같은 뉴스를 올렸는데 [구글뉴스](https://news.google.com/)가 비슷한 뉴스끼리 묶어놓았다. 
 
 비지도학습은 지도학습과 다르게 결과가 어떻게 나올지에 대한 정보가 거의 없거나 없는 문제에 접근한다. 비지도학습을 통해서 각 변수의 특징을 모르는 데이터들로부터 구조를 만들수 있다.  
 
@@ -84,3 +84,5 @@ Classification 문제를 예시를 들어 생각해보자. 우선 지도학습�
 
 ### reference 
  - [Coursera Machine learning by Andrew ng]((https://www.coursera.org/learn/machine-learning/home/week/1)])
+ 
+---

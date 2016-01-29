@@ -128,3 +128,4 @@ Gradient Decent는 J=0, J=1일 때를 동시에 업데이트를 한다.
 \begin{align*} \text{repeat until convergence: } \lbrace & \\ \theta_0 := & \theta_0 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}(h_\theta(x^{(i)}) - y^{(i)}) \\ \theta_1 := & \theta_1 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}\left((h_\theta(x^{(i)}) - y^{(i)}) x^{(i)}\right) \\ \rbrace&\end{align*}
 </div>
 
+---
