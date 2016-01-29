@@ -1,6 +1,7 @@
 ---
 layout: post
 title: ML2::Multivariate Linear Regression
+category: Machine Learning
 ---
 
 ## 모델의 표현

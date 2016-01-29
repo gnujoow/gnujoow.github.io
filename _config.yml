@@ -10,7 +10,7 @@ relative_permalinks: true
 
 # Setup
 title:            김로그
-tagline:          'A Jekyll blog by gnujoow'
+tagline:          ''
 description:      '2016.01'
 url:              http://hyde.getpoole.com
 baseurl:          /

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: ML3::Logistic Regression
+category: Machine Learning
 ---
 ## Classification and Representation
 
