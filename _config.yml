@@ -16,10 +16,11 @@ url:              http://hyde.getpoole.com
 baseurl:          /
 
 author:
-  name:           'Mark Otto'
-  url:            https://twitter.com/mdo
+  name:           'WJ'
+  url:            #https://twitter.com/mdo
 
 paginate:         5
+comments:		  true
 
 # Custom vars
 github:
