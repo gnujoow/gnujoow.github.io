@@ -12,7 +12,7 @@ relative_permalinks: true
 title:            김로그
 tagline:          ''
 description:      '2016.01'
-url:              http://hyde.getpoole.com
+url:              /
 baseurl:          /
 
 author:

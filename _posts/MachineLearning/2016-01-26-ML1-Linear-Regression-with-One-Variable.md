@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ML1::Linear Regression with One Variable
-category: Machine Learning
+category: [Machine Learning]
 ---
 
 

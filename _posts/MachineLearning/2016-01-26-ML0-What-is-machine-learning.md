@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ML0::What is Machine Learning
-category: Machine Learning
+category: [Machine Learning]
 ---
 
 
