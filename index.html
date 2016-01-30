@@ -13,6 +13,16 @@ title: Home
     </h1>
     <span class="post-date">{{ post.date | date_to_string }}</span>
     <!--{{ post.content }}-->
+    
+    <ul class="tag-cloud" style="list-style:none; padding:0; margin:0;">
+    {% for tag in post.tag %}
+      <li style="list-style:none;
+            display:inline;
+            font-size: 15px">
+        <code>#{{ tag }}</code>
+      </li>
+    {% endfor %}
+    </ul>
     <hr>
   </div>
   {% endfor %}
