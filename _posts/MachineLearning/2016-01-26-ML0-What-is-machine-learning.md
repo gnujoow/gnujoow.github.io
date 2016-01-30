@@ -2,6 +2,7 @@
 layout: post
 title: ML0::What is Machine Learning
 category: [Machine Learning]
+tag: [Machine Learning, Supervised Learning, Unsupervised Learning]
 ---
 
 

@@ -2,6 +2,7 @@
 layout: post
 title: ML3::Logistic Regression
 category: [Machine Learning]
+tag: [Machine Learning, Supervised Learning, Classification, Logistic Regression]
 ---
 ## Classification and Representation
 

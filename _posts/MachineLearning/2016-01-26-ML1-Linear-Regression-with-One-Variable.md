@@ -2,6 +2,7 @@
 layout: post
 title: ML1::Linear Regression with One Variable
 category: [Machine Learning]
+tag: [Machine Learning, Supervised Learning, Linear Regression]
 ---
 
 

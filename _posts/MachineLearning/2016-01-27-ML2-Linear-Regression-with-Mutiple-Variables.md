@@ -2,6 +2,7 @@
 layout: post
 title: ML2::Multivariate Linear Regression
 category: [Machine Learning]
+tag: [Machine Learning, Supervised Learning, Linear Regression]
 ---
 
 ## 모델의 표현
