@@ -233,7 +233,7 @@ One vs All은 n개의 원소에 대해서 n+1개의 binary classification 문제
 
 
 이번 포스팅은 너무 날림으로 한 것같다. ㅠㅠ
-
+ 
 
 ---
 ## Reference
