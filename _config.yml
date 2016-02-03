@@ -6,7 +6,6 @@ encoding: 		  utf-8
 
 # Permalinks
 permalink:        pretty
-relative_permalinks: true
 
 # Setup
 title:            김로그
