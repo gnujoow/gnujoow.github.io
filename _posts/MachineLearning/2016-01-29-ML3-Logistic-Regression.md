@@ -3,6 +3,7 @@ layout: post
 title: ML3::Logistic Regression
 category: [Machine Learning]
 tag: [Machine Learning, Supervised Learning, Classification, Logistic Regression,Multiclass Classification]
+description: Logistic Regression을 통해 classification문제를 푸는 방법을 알아보도록 하자.
 ---
 ## Classification and Representation
 

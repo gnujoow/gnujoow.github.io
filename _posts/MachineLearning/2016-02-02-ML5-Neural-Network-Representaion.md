@@ -3,6 +3,7 @@ layout: post
 title: ML5::Neural Networks:Representation
 category: [Machine Learning]
 tag: [Machine Learning, Neural Networks]
+description: 인공 신경망(artificial neural network)에 대해서 알아보고 표현에 대해서 알아보자.
 ---
 
 이번 포스팅과 그리고 다음에 올릴 포스팅에서 **신경망(Neural Network)**에 대해서 알아본다. 신경망은 꽤 오래된 아이디어이고 잠시 사람들 관심 밖의 아이디어였지만 오늘날에는 여러 기계학습문제에 관련해서 중요한 축으로 자리잡았다. 우리는 이미 Linear Regression이랑 Logistic regression을 배웠는데 (게다가 교수님이 우리가 많이 안다고 하셨는데) 왜 신경망 알고리즘을 알아야 할까? 다음 예를 보면서 알아보도록 하자.
@@ -44,7 +45,7 @@ $
 
 ![예1](/assets/posts/MachineLearning/ml5-2.png)
 
-여러 그림들의 특정 위치 pixel1, pixel2를 가지고 자동차인지 아닌지 구별하고 그래프로 나타내보자. 원래 이미지의 pixel1의 특징과 pixel2의 특징이 어디서 나타나는지 그래프로 표현해보고 차인지 아닌지 더 많은 예를 통해서 그려보면 아래와 같은 그래프가 나타나게 된다. 그럼 이 그래프를 2클래스로 나눌수 있다. 그럼 feature space의 dimension은 어떻게 될까? 가로세로가 각각 50인 그림이 있다면 총 그림에 2500개의 픽셀이 존재한다. 그럼 2500개의 특징이 존재한다. 이것을 Quadratic features로 나타내면 \\(/frac{n^2}{2}\\)이므로 약 3백만개의 특징이 존재하며 컴퓨터가 일일이 계산하기에는 너무 큰 시간이 소요된다.
+여러 그림들의 특정 위치 pixel1, pixel2를 가지고 자동차인지 아닌지 구별하고 그래프로 나타내보자. 원래 이미지의 pixel1의 특징과 pixel2의 특징이 어디서 나타나는지 그래프로 표현해보고 차인지 아닌지 더 많은 예를 통해서 그려보면 아래와 같은 그래프가 나타나게 된다. 그럼 이 그래프를 2클래스로 나눌수 있다. 그럼 feature space의 dimension은 어떻게 될까? 가로세로가 각각 50인 그림이 있다면 총 그림에 2500개의 픽셀이 존재한다. 그럼 2500개의 특징이 존재한다. 이것을 Quadratic features로 나타내면 \\(\frac {n^2}{2}\\)이므로 약 3백만개의 특징이 존재하며 컴퓨터가 일일이 계산하기에는 너무 큰 시간이 소요된다.
 
 따라서 특징이 많은 모델에 대해서 logistic regression을 적용하기에는 적절하지 않다. 
 
@@ -81,3 +82,36 @@ $
 
 
 ![예1](/assets/posts/MachineLearning/ml5-6.png)
+
+뉴런들의 사진이 있다. 뉴런들은 spikes라고 불리는 아주 작은 전기 펄스 신호를 이용해서 서로 커뮤니케이션을 한다. Axon으로 부터 나온 전기적 신호는 다른 뉴런의 dentrites에 전달되고 어떤 계산을 한 후에 axon을 통해 다른 뉴런으로 보낼지 결정한다. 우리가 느낀 감각들이 뉴런을 통해 전달되는 과정이 우리몸의 신경계애서 일어나고 있다. 그리고 이 과정은 우리의 감각과 근육이 움직이는 과정이다.
+
+
+![예1](/assets/posts/MachineLearning/ml5-7.png)
+
+인공 신경망(artificial neural network)에서는 뉴런들이 하는 일을 컴퓨터가 하도록 적용하였다. 뉴런 하나하나를 logistic unit으로 하고 단순화한 모델을 사용한다.
+
+사람의 뉴런과 마찬가지로 입력 x를 받아서 노란색 노드에서 계산을하고 출력을 내보낸다.
+
+Dendrite는 input wire가 되고 가운데 노란색으로 표시한 원은 뉴런의 몸체가되고 Axon은 output wire가 되고 spikes는 hypothesis function이 된다.
+
+강의를 하시는 Andrew Ng교수님은 보통 input wire를 x1,2,3만 그리시지만 경우에 따라 **bias unit**혹은 **bias neuron**인 x0를 같이 그려주는것이 표기상 편할 때도 있다. x0는 1을 나타낸다고 한다.
+
+신경망 알고리즘을 이야기할 때 위 그림을 우리는 **sigmoid(logistic) activation function** 혹은 **artificial neuron with sidmoid**라고 부른다.
+표현은 \\(g(z)\\)로 한다.
+
+![예1](/assets/posts/MachineLearning/ml5-8.png)
+
+logistic unit들이 모여서 형성된 neural network를 살펴보자. 용어정리를 간단히 하자만 가장 왼쪽의 x노드들을 **input layer** 가장 오른쪽의 노란색노드를 **output layer**그리고 가운데 노드를 **hidden layer**라고 한다. 
+
+아까 언급했던 바와 같이 bais unit을 추가하여 네트워크를 구성할 수 있다.
+
+![예1](/assets/posts/MachineLearning/ml5-9.png)
+
+
+## Model Representation II
+
+
+---
+## reference
+ 
+ - [courser machine learning by Andrew Ng](https://www.coursera.org/learn/machine-learning/lecture/ka3jK/model-representation-i)

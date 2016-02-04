@@ -13,7 +13,9 @@ tagline:          ''
 description:      '2016.01'
 url:              /
 baseurl:          /
+description: "머신러닝을 공부하고 있는 백수의 블로그"
 
+#
 author:
   name:           'WJ'
   url:            #https://twitter.com/mdo
