@@ -182,7 +182,7 @@ normal equation의 특징 중 하나는 feature scaling을 할 필요없다는 �
 	<tr><th>Gradient Descent</th><th>Normal Equation</th></tr>
 	<tr><td>alpha를 선택해야함</td><td>alpha를 선택할 필요 없음</td></tr>
 	<tr><td>반복 연산</td><td>반복 연산 없음</td></tr>
-	<tr><td>n이 클 때 잘 작동함</td><td>n이 크면 느림</	td></tr>
+	<tr><td>n이 클 때 잘 작동함</td><td>n이 크면 느림</td></tr>
 	</tbody>
 </table>
 
@@ -194,5 +194,3 @@ normal equation의 시간복잡도는 약 \\(\mathcal{O}(n^3) \\)가 된다. And
 
  - [Cousera course wiki](https://share.coursera.org/wiki/index.php/ML:Linear_Regression_with_Multiple_Variables#Polynomial_Regression)
  - [Machine Learning by Andrew Ng](https://www.coursera.org/learn/machine-learning/home/week/2)
-
----
