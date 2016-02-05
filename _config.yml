@@ -13,7 +13,7 @@ tagline:          ''
 description:      '2016.01'
 url:              http://gnujoow.github.io/
 baseurl:          /
-description: "머신러닝을 공부하고 있는 백수의 블로그"
+description:      "머신러닝을 공부하고 있는 백수의 블로그"
 
 #
 author:
