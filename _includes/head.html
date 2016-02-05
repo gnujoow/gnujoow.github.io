@@ -7,8 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="사이트 제목">
-  
 
   {% if page.description %}
     <meta name="description" content="{{ page.description}}" />
@@ -22,13 +20,15 @@
     <meta name="keywords" content="{{ page.tags | join: ',' }}" />
   {% endif %}
   
-  <title>
-    {% if page.title == "Home" %}
-      {{ site.title }} &middot; {{ site.tagline }}
-    {% else %}
-      {{ page.title }} &middot; {{ site.title }}
-    {% endif %}
-  </title>
+
+  {% if page.title == "Home" %}
+    <title>{{ site.title }} &middot; {{ site.tagline }}</title>
+    <meta property="og:title" content="{{ site.title }} {{ site.tagline }}">
+  {% else %}
+    <title>{{ page.title }} &middot; {{ site.title }}</title>
+    <meta property="og:title" content="{{ page.title }} {{ site.tagline }}">
+  {% endif %}
+
 
   <!-- CSS -->
   <link rel="stylesheet" href="{{ site.baseurl }}public/css/poole.css">
