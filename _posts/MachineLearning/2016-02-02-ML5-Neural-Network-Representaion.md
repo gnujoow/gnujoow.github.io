@@ -83,21 +83,41 @@ $
 
 ![예1](/assets/posts/MachineLearning/ml5-6.png)
 
-뉴런들의 사진이 있다. 뉴런들은 spikes라고 불리는 아주 작은 전기 펄스 신호를 이용해서 서로 커뮤니케이션을 한다. Axon으로 부터 나온 전기적 신호는 다른 뉴런의 dentrites에 전달되고 어떤 계산을 한 후에 axon을 통해 다른 뉴런으로 보낼지 결정한다. 우리가 느낀 감각들이 뉴런을 통해 전달되는 과정이 우리몸의 신경계애서 일어나고 있다. 그리고 이 과정은 우리의 감각과 근육이 움직이는 과정이다.
-
+뉴런들의 사진이 있다. 뉴런들은 spikes라고 불리는 아주 작은 전기 펄스 신호를 이용해서 서로 커뮤니케이션을 한다. Axon으로 부터 나온 전기적 신호는 다른 뉴런의 dentrites에 전달되고 어떤 계산을 한 후에 axon을 통해 다른 뉴런으로 보낼지 결정한다. 우리가 느낀 감각들이 뉴런을 통해 전달되는 과정이 우리몸의 신경계애서 일어나고 있다. 그리고 이 과정은 우리의 감각과 근육이 움직이는 과정과 같다.
 
 ![예1](/assets/posts/MachineLearning/ml5-7.png)
+그럼 신경망 알고리즘의 가설함수 표현을 알아보자.
 
 인공 신경망(artificial neural network)에서는 뉴런들이 하는 일을 컴퓨터가 하도록 적용하였다. 뉴런 하나하나를 logistic unit으로 하고 단순화한 모델을 사용한다.
 
-사람의 뉴런과 마찬가지로 입력 x를 받아서 노란색 노드에서 계산을하고 출력을 내보낸다.
+앞서 살펴본바와 같이 뉴런은 하나의 계산 유닛이다. **dendrites**로 부터 전기적 신호 spikes를 입력을 받고 처리한 후 Axon을 통해서 출력한다.
 
-Dendrite는 input wire가 되고 가운데 노란색으로 표시한 원은 뉴런의 몸체가되고 Axon은 output wire가 되고 spikes는 hypothesis function이 된다.
+인공 신경망에서는 dendrites는 입력되는 틍징들이며 Axon은 가설함수의 결과로 나타낸다.
 
-강의를 하시는 Andrew Ng교수님은 보통 input wire를 x1,2,3만 그리시지만 경우에 따라 **bias unit**혹은 **bias neuron**인 x0를 같이 그려주는것이 표기상 편할 때도 있다. x0는 1을 나타낸다고 한다.
+강의를 하시는 Andrew Ng교수님은 보통 input wire를 x1,2,3만 그리시지만 경우에 따라 **bias unit**혹은 **bias neuron**인 x0를 같이 그려주는것이 표기상 편할 때도 있다. 그리고 블로그를 찾아보니 bias unit은 입력 값에 대한 가중치들이 편향되지 않게 하는 기능도 있다고 한다.
+bias unit의 값은 1이다.
 
-신경망 알고리즘을 이야기할 때 위 그림을 우리는 **sigmoid(logistic) activation function** 혹은 **artificial neuron with sidmoid**라고 부른다.
+앞서 말한바와 같이 뉴런하나하나를 logistic  unit으로 단순화 한다. 인공 신경망에서는 classfication에서 사용했던 sigmoid function을 사용하는데, 이것을
+ **sigmoid(logistic) activation function** 혹은 **artificial neuron with sidmoid**라고 부른다.
 표현은 \\(g(z)\\)로 한다.
+
+\\(\theta\\)는 nueral network에서 weight라고 부르기도 한다. 하나의 뉴런을 간단하게 나타내면 아래와 같이 표현할 수 있다.
+
+<div>
+$
+\begin{bmatrix}
+x_0 \newline
+x_1 \newline
+x_2 \newline
+\end{bmatrix}
+\rightarrow
+\begin{bmatrix}
+\ \ \ \newline
+\end{bmatrix}
+\rightarrow
+h_\theta(x)
+$
+</div>
 
 ![예1](/assets/posts/MachineLearning/ml5-8.png)
 
@@ -107,11 +127,58 @@ logistic unit들이 모여서 형성된 neural network를 살펴보자. 용어�
 
 ![예1](/assets/posts/MachineLearning/ml5-9.png)
 
+인공신경망에서의 계산을 설명하기 앞서 두식의 표기를 알아보고 시작하자.
+
+<div>
+$
+\begin{align*}
+& a_i^{(j)} = \text{"activation" of unit $i$ in layer $j$} \newline
+& \Theta^{(j)} = \text{matrix of weights controlling function mapping from layer $j$ to layer $j+1$}
+\end{align*}
+$
+</div>
+
+\\(\Theta\\)는 레이어 j에서 j+1로 입력이 들어갈때 가중치를 정하는 함수가 되겠다.
+
+a는 레이어 l의 유닛 i의 activation(출력 값)을 의미한다. a는 g로 표시되는 logistic activation function를 통해 나온 값을 의미한다.
+수식에서와 같이 각 입력에 대한 \\(\Theta\\)가 곱한한 값을 logistic activation function에 넣었을 때 나오는 결과가 바로 activation이고 a로 나타낸다.
+
+<div>
+$
+\text{j번째 레이어에 $s_j$가 있고 j+1번째 레이어에 $s_{j+1}$가 있다면 $\Theta$벡터의 차원$s_{j+1} \times (s_j + 1)$.}
+$
+</div>
+
+예를 들어 위 그림처럼 입력이 3개 activation node가 3개 있을경우 \\(\Theta^{(1)}\\)벡터의 차원은 3\\(\times\\)4가 된다.
+
 
 ## Model Representation II
 
+Forward propagation:Vectorized implementation
+
+위에서 배운 식들을 벡터로 구현하는 방법에 대해서 알아보자. activation 노드를 계산하는 식에서 g함수가 포함하고 있는 식들을 \\(z_k^{(i)}\\)라고 정의하자. 그럼 우리가 이전에 표현했던 식들을 z로 나타낼수 있다.
+
+<div>
+$
+\begin{align*}
+a_1^{(2)} = g(z_1^{(2)}) \newline
+a_2^{(2)} = g(z_2^{(2)}) \newline
+a_3^{(2)} = g(z_3^{(2)}) \newline
+\end{align*}
+$
+</div>
+
+j=2 번째인 레이어 노드 k를 z로 나타내면 아래식과 같다.
+
+<div>
+$
+z_k^{(2)} = \Theta_{k,0}^{(1)}x_0 + \Theta_{k,1}^{(1)}x_1 + \cdots + \Theta_{k,n}^{(1)}x_n
+$
+</div>
 
 ---
+
 ## reference
  
  - [courser machine learning by Andrew Ng](https://www.coursera.org/learn/machine-learning/lecture/ka3jK/model-representation-i)
+ - [인공 신경망에 관한 설명](http://poohrusa.tistory.com/1283)
