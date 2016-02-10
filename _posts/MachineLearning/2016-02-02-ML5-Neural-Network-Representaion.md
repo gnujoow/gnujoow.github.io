@@ -123,7 +123,7 @@ $
 
 logistic unit들이 모여서 형성된 neural network를 살펴보자. 용어정리를 간단히 하자만 가장 왼쪽의 x노드들을 **input layer** 가장 오른쪽의 노란색노드를 **output layer**그리고 가운데 노드를 **hidden layer**라고 한다. 
 
-아까 언급했던 바와 같이 bais unit을 추가하여 네트워크를 구성할 수 있다.
+아까 언급했던 바와 같이 bias unit을 추가하여 네트워크를 구성할 수 있다.
 
 ![예1](/assets/posts/MachineLearning/ml5-9.png)
 
@@ -175,6 +175,167 @@ $
 z_k^{(2)} = \Theta_{k,0}^{(1)}x_0 + \Theta_{k,1}^{(1)}x_1 + \cdots + \Theta_{k,n}^{(1)}x_n
 $
 </div>
+
+<br>
+x와 \\(z^{(j)}\\)의 벡터표현은 아래와 같다.
+<br>
+
+<div>
+$
+\begin{align*}
+x = 
+\begin{bmatrix}
+x_0 \newline
+x_1 \newline
+\cdots \newline
+x_n
+\end{bmatrix} &
+z^{(j)} = 
+\begin{bmatrix}
+z_1^{(j)} \newline
+z_2^{(j)} \newline
+\cdots \newline
+z_n^{(j)}
+\end{bmatrix}
+\end{align*}
+$
+</div>
+
+## Examples and Intuitions
+
+이제 복잡한 비선형 입력이 들어왔을 때 신경망 알고리즘이 어떻게 계산하는지 예를 들어 설명해보겠다.
+
+신경망을 이용한 간단한 예제중 하나는 x1과 x2의 논리연산 결과를 예측하는 것이다.
+
+(논리연산 AND는 입력한 두 값 모두가 1일때 1을 반환한다.)
+
+![예1](/assets/posts/MachineLearning/ml5-10.png)
+
+입력되는 값 x1, x2는 0,1둘 중 하나의 값이고 y는 x1 AND x2일 때, 위 그림은 아래 식으로 나타낼 수 있다.
+
+<div>
+$
+\begin{align*}
+\begin{bmatrix}
+x_0 \newline
+x_1 \newline
+x_2
+\end{bmatrix} \rightarrow
+\begin{bmatrix}
+g(z^{(2)})
+\end{bmatrix} \rightarrow
+h_\Theta(x)
+\end{align*}
+$
+</div>
+
+그리고 그림에 표현된 +1는 bias unit임을 잊지말자. theta matrix는 다음과같다.
+
+<div>
+$
+\Theta^{(1)} = 
+\begin{bmatrix}-20 & 30 & 30\end{bmatrix}
+$
+</div>
+
+위와 같이 theta matrix를 정하면 x1과 x2 모두 1이여만 양수가 되서 1이된다.
+
+<div>
+$
+\begin{align*}
+& h_\Theta(x) = g(-30 + 20x_1 + 20x_2) \newline
+\newline
+& x_1 = 0 \ \ and \ \ x_2 = 0 \ \ then \ \ g(-30) \approx 0 \newline
+& x_1 = 0 \ \ and \ \ x_2 = 1 \ \ then \ \ g(-10) \approx 0 \newline
+& x_1 = 1 \ \ and \ \ x_2 = 0 \ \ then \ \ g(-10) \approx 0 \newline
+& x_1 = 1 \ \ and \ \ x_2 = 1 \ \ then \ \ g(10) \approx 1
+\end{align*}
+$
+</div>
+
+위와 같이  논리 게이트를 사용하듯 인공신경망의 작은단위를 이용하면 논리연산을 할 수 있다. theta matrix의 값을 조금만 바꾸면 AND뿐만 아니라 OR NOR연산도 가능하다.
+
+<div>
+$
+\begin{align*}
+AND:\newline
+\Theta^{(1)} &=
+\begin{bmatrix}-30 & 20 & 20\end{bmatrix} \newline
+NOR:\newline
+\Theta^{(1)} &= 
+\begin{bmatrix}10 & -20 & -20\end{bmatrix} \newline
+OR:\newline
+\Theta^{(1)} &= 
+\begin{bmatrix}-10 & 20 & 20\end{bmatrix} \newline
+\end{align*}
+$
+</div>
+
+위와 같이 theta matrix의 값만 바꿔주면 된다.
+
+그럼 XNOR같은 연산은 어떻게 할까? 
+
+![예1](/assets/posts/MachineLearning/ml5-11.png)
+
+<div>
+$
+\begin{align*}
+\begin{bmatrix}
+x_0 \newline
+x_1 \newline
+x_2
+\end{bmatrix} \rightarrow
+\begin{bmatrix}
+a_1^{(2)} \newline
+a_2^{(2)} 
+\end{bmatrix} \rightarrow
+\begin{bmatrix}
+a^{(3)}
+\end{bmatrix} \rightarrow
+h_\Theta(x)
+\end{align*}
+$
+</div>
+
+신경망을 수식으로 나타내면 위와 같다. 첫번째 레이어에서 두번째 레이어로 전개할때 NOR연산과 AND연산을 하기 위해 theta 1 을 사용한다.
+
+<div>
+$
+\Theta^{(1)} = 
+\begin{bmatrix}
+-30 & 20 & 20 \newline
+10 & -20 & -20
+\end{bmatrix}
+$
+</div>
+
+그리고 두번재 레이어에서 다음 레이어로 전개 할때는 OR연산을 하므로 theta matrix는 아래와 같다.
+
+<div>
+$
+\Theta^{(2)} = 
+\begin{bmatrix}-10 & 20 & 20\end{bmatrix}
+$
+</div>
+
+위 과정들을 수식으로 나타내면
+
+<div>
+$
+\begin{align*}
+& a^{(2)} = g(\Theta^{(1)} \cdot x) \newline
+& a^{(3)} = g(\Theta^{(2)} \cdot a^{(2)}) \newline
+& h_\Theta(x) = a^{(3)}
+\end{align*}
+$
+</div>
+
+이 된다.
+
+---
+
+마치며
+인공신경망에 대해서 알아보았다. 수업 중간중간에 여기저기서 튀어나오는 여러수식과 수학기호들 때문에 좀 버벅거렸지만 집중하고 천천히 쫓아가다보니 개념에 대해서 이해할 수 있었다. 하지막 내가 이해한바를 모두 글로 표현했는지 잘 모르겠다. 좀 더 공부하면서 내용을 보충해야겠다.
 
 ---
 

@@ -8,7 +8,6 @@ title: Tags
   <li style="list-style:none;
   			display:inline;
   			font-size: {{ tag | last | size | times: 100 | divided_by: site.tags.size | plus: 70  }}% ">
-    
     <a href="#{{ tag | first | slugize }}">
       <code>#{{ tag | first }}</code>
     </a>
