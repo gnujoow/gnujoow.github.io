@@ -88,4 +88,4 @@ $
 
 이전 포스팅에서도 많이 다뤘지만 가설함수(hypothesis function)이 training set에 대해서 너무 잘 표현된다면 overfitting이 일어난다는 것을 알고 있다. 이는 새롭게 추가되는 데이터에 대해서 가설함수가 제대로 적용도지 않기 때문이다.
 
-<!-- -->
+그럼 본격적으로 model selection problem에 대해서 이야기해보자.
