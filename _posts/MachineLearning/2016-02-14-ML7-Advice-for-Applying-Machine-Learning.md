@@ -86,6 +86,32 @@ $
 알고리즘을 선택하기 없어 가설함수를 몇차(**polynomial**)로 표현할 것인지, 어떤 **특징**들을 알고리즘을 학습시키는데 사용할 것인지 regularization을 할 때 \\(\lambda\\)값을 어떤걸 선택할지 결정해야 할 때 어떻게 해야할까? 이러한 문제는 **Model selection problem**라고 한다.
 데이터를 train set과 test set으로 나누는 법과 train, validation, test sets으로 바꾸는 법도 알아보자. (맞는표현인지 모르겠다. 영알못...)
 
-이전 포스팅에서도 많이 다뤘지만 가설함수(hypothesis function)이 training set에 대해서 너무 잘 표현된다면 overfitting이 일어난다는 것을 알고 있다. 이는 새롭게 추가되는 데이터에 대해서 가설함수가 제대로 적용도지 않기 때문이다.
+이전 포스팅에서도 많이 다뤘지만 가설함수(hypothesis function)이 training set에 대해서 너무 잘 표현된다면 overfitting이 일어난다는 것을 알고 있다. 이는 새롭게 추가되는 데이터에 대해서 가설함수가 제대로 적용되지 않기 때문이다.
 
 그럼 본격적으로 model selection problem에 대해서 이야기해보자.
+
+어떤 polynomial을 사용해야 데이터를 적절히 표현 할 수 있을까? linear(1차), quardratic(2차), cubic(3차) 등등...
+
+결론 부터 이야기하자면 각 차수에 대한 hypothesis  표현에 대해서 테스트를 해보고 에러 결과를 토대로 결정 하면된다.
+
+### Validation set없이 테스트
+
+일단 이야기를 하기 앞서 변수를 하나를 선언하자. <del>말이 좀 이상한것 같지만</del>
+
+ - **d** : 최고차항의 차수
+
+
+![예1](/images/MachineLearning/ml7/0.png)
+
+각 **d**에 대한 테스트를 수행하고 이들중 하나를 고른다고 하자. 
+가장 먼저 할 일은 첫번째 모델을 고르고 training 에러를 최소화하는 hypothesis를 구한다. 
+그리고 **각 \\(\theta\\)의 모임을 벡터\\(\Theta\\)라고 하자.**
+d에 대한각각의 \\(\Theta\\)를 구분하기 위해 윗첨차로 (d)를 적는다. 그 다음에는 각 \\(\Theta\\)에 대해여 **test set error**를 구한다.
+
+그리고 이 중 test set error가 가장 적은 모델을 사용하면 된다.
+<del>결론을 말하자면 검증이 안된 모델이라 사용하는 것에 대해서 고려를 해봐야한다</del>
+
+그결과 **d=5**인 hypothesis가 에러가 가장 적다고하자. 과연 이 모델이 일반적이 데이터 셋에 대해서도 에러가 적을까? 
+
+polynomial hypothesis를 선택 할 때, d에 대한 테스트 에러가 적은것을 선택했다. 만약 다른 테스트 셋을 이용하여 test set error가 적은 거ㅅ
+ 이 경우 우리는 테스트 셋을 이용해 하나의 변수**d**에 대해 학습을 하였다. 이는 다른 에러값보다 클 수 있다. <del>추후에 내용을 더 추가해야겠다.</del>
