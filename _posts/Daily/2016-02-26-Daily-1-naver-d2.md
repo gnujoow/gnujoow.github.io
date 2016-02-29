@@ -3,7 +3,7 @@ layout: post
 title: 2016/02/26 naver d2 campus seminar를 다녀와서
 category: [daily]
 tag: [잡담, opensource]
-description: naver d2 campus seminar를 다녀와서 느낀점
+description: naver d2 campus seminar를 다녀와서 느낀점과 주관적인 세미나 정리 포스팅
 ---
 
 대학생활을 하면서 [X[deca]](http://www.xdeca.com/)와 [멋쟁이사자처럼](http://likelion.net/) 두 동아리활동을 열심히하고있다. X[deca]는 건국대학교 전자공학부 학술소모임인데 작년부터(?)[삼성소프트웨어프렌드쉽](http://www.secmem.org/)과 [Naver D2 campus partner](http://developer.naver.com/wiki/pages/D2Campus)의 후원을 받으면서 성장하고 있다. 이번에 naver d2 campus에서 초대장을 보내주셔서 [Naver D2 campus seminar](http://d2.naver.com/news/2137145)를 다녀왔다. 발표자 분들깨서 좋은 내용으로 재밋게 ㅋㅋㅋ 발표해주셔서 좋은 시간을 보낼 수 있었다. 느낀점과 들을 내용을<del>아주 주관적으로</del>정리해보고자 한다.
