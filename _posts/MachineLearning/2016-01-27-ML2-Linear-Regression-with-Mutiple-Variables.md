@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ML2::Multivariate Linear Regression
-category: [Machine Learning]
+category: [MachineLearning]
 tag: [Machine Learning, Supervised Learning, Linear Regression]
 description: 다중선형회귀에 대해서 알아보자.
 ---

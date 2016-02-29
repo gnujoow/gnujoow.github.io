@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ML5::Neural Networks:Representation
-category: [Machine Learning]
+category: [MachineLearning]
 tag: [Machine Learning, Neural Networks]
 description: 인공 신경망(artificial neural network)에 대해서 알아보고 표현에 대해서 알아보자.
 ---
