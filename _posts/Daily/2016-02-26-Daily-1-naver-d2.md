@@ -6,7 +6,7 @@ tag: [잡담, opensource]
 description: naver d2 campus seminar를 다녀와서 느낀점과 주관적인 세미나 정리 포스팅
 ---
 
-(http://d2.naver.com/news/2137145)를 다녀왔다. 발표자 분들깨서 좋은 내용으로 재밋게 ㅋㅋㅋ 발표해주셔서 좋은 시간을 보낼 수 있었다. 느낀점과 들을 내용을 <del>아주 주관적으로</del> 정리해보고자 한다.
+[naver d2 campus seminar](http://d2.naver.com/news/2137145)를 다녀왔다. 발표자 분들깨서 좋은 내용으로 재밋게 ㅋㅋㅋ 발표해주셔서 좋은 시간을 보낼 수 있었다. 느낀점과 들을 내용을 <del>아주 주관적으로</del> 정리해보고자 한다.
 
 
 ![예1](/images/daily/daily1/0.png)
