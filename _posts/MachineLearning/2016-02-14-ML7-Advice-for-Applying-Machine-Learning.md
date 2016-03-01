@@ -116,3 +116,30 @@ d에 대한각각의 \\(\Theta\\)를 구분하기 위해 윗첨차로 (d)를 적
 polynomial hypothesis를 선택 할 때, d에 대한 테스트 에러가 적은것을 선택했다. 만약 다른 테스트 셋을 이용하여 test set error가 적은 거ㅅ
  이 경우 우리는 테스트 셋을 이용해 하나의 변수**d**에 대해 학습을 하였다. 만약 테스트 셋이 다를 경우에도 앞서 선택한 polynomail hypothesis가 에러가 가장 작을까? 아마 확신하기 어려울 것이다.
  
+이런 문제를 해결하기 위해서 모델을 선택하는 방법을 달리해야한다. 일반적으로 training set과 test set 두 모델로 나누는 방법과 달리 모델을 **셋**으로 나눈다.
+
+ - training set
+ - test set
+ - **cross validation set**
+
+보통 세 집단을 나눌때 전체 모델을 랜덤하게 60%, 20%, 20%으로 나눈다고 한다.
+
+![예1](/images/MachineLearning/ml7/1.png)
+
+각각 나눈 모델에 해서 train / validation / test error를 구할 수 있다.
+
+### Validation set를 사용하여 테스트
+
+ 1. polynomial degree **d**에 대해서 training set을 이용하여 \\(\Theta\\)를 최적화한다.
+ 2. **cross validation set**을 이용하여 **d**에 대한 에러를 구한다. 그리고 에러가 가장 작은 polynomial모델 표현을 찾는다.
+ 3. \\(J_{test}(\Theta^{(d)})\\)를 이용하여 일반화 오류를 예측한다.
+
+
+---
+
+## reference 
+
+ - [Machine learning by Andrew Ng](https://www.coursera.org/learn/machine-learning)
+ - [Lec38. Machine Learning(머신러닝) ? Evaluating a Learning Algorithm and Cross Validation(교차 검증)|작성자 헐멍](http://blog.naver.com/mypa3424/220576318791)
+ 
+
