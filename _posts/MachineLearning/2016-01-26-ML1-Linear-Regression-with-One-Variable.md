@@ -1,7 +1,7 @@
 ---
 layout: post
-title: ML1::Linear Regression with One Variable
-category: [MachineLearning]
+title: 1.Linear Regression with One Variable
+category: [ML]
 tag: [Machine Learning, Supervised Learning, Linear Regression]
 description: 변수가 하나인 선형회귀(linear regression)에 대해서 알아보자
 ---

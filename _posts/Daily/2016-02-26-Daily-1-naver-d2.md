@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 2016/02/26 naver d2 campus seminar를 다녀와서
-category: [daily]
+title: naver d2 campus seminar
+category: [Daily]
 tag: [잡담, opensource]
 description: naver d2 campus seminar를 다녀와서 느낀점과 주관적인 세미나 정리 포스팅
 ---
