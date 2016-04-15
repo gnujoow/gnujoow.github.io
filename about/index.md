@@ -21,4 +21,4 @@ title: About
 ## contact
 
  - [linkedin](https://kr.linkedin.com/in/wjkim90)
- - email : gnujoow.kim <at> gmail <dot> com
+ - email : gnujoow.kim at gmail dot com
