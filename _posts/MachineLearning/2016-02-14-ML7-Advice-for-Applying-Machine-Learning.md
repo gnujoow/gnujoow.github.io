@@ -140,6 +140,6 @@ polynomial hypothesis를 선택 할 때, d에 대한 테스트 에러가 적은�
 ## reference 
 
  - [Machine learning by Andrew Ng](https://www.coursera.org/learn/machine-learning)
- - [Lec38. Machine Learning(머신러닝) ? Evaluating a Learning Algorithm and Cross Validation(교차 검증)|작성자 헐멍](http://blog.naver.com/mypa3424/220576318791)
+ - [Lec38. Machine Learning(머신러닝) 교차 검증 작성자 헐멍](http://blog.naver.com/mypa3424/220576318791)
  
 
