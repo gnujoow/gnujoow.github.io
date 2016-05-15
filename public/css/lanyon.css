@@ -35,6 +35,8 @@
  */
 
 /* Prevent scroll on narrow devices */
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
 html,
 body {
   overflow-x: hidden;
@@ -51,6 +53,9 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -.025rem;
 }
 
+p {
+  font-family: "Nanum Gothic", sans-serif;
+}
 
 /*
  * Wrapper
