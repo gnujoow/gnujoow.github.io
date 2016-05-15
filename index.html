@@ -8,7 +8,7 @@ title: Home
   <div class="post">
     <h2 class="post-title">
       <font color="#707070">
-        {{ post.category }}::
+        [{{ post.category }}]
       </font>
       <a href="{{ post.url }}">
         {{ post.title }}
@@ -21,7 +21,7 @@ title: Home
     {% for tag in post.tag %}
       <li style="list-style:none;
             display:inline;
-            font-size: 10px">
+            font-size: 0.8em">
         <a href="/tags/#{{tag}}">
           <code>#{{ tag }}</code>
         </a>
