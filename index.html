@@ -7,9 +7,9 @@ title: Home
   {% for post in paginator.posts %}
   <div class="post">
     <h2 class="post-title">
-        <font color="#707070">
-          {{ post.category }}::
-        </font>
+      <font color="#707070">
+        {{ post.category }}::
+      </font>
       <a href="{{ post.url }}">
         {{ post.title }}
       </a>
@@ -29,21 +29,22 @@ title: Home
     {% endfor %}
     </ul>
     <hr>
+
   </div>
   {% endfor %}
 </div>
 
 <div class="pagination">
   {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">이전 포스트</a>
+    <a class="pagination-item older" href="{{ site.baseurl }}/page{{paginator.next_page}}">이전 포스트</a>
   {% else %}
     <span class="pagination-item older">이전 포스트</span>
   {% endif %}
   {% if paginator.previous_page %}
     {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}">다음 포스트</a>
+      <a class="pagination-item newer" href="{{ site.baseurl }}/">다음 포스트</a>
     {% else %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">다음 포스트</a>
+      <a class="pagination-item newer" href="{{ site.baseurl }}/page{{paginator.previous_page}}">다음 포스트</a>
     {% endif %}
   {% else %}
     <span class="pagination-item newer">다음 포스트</span>

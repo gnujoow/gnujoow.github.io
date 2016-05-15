@@ -1,34 +1,22 @@
-
-
-# Dependencies
-markdown:         kramdown
-highlighter:      rouge
-encoding: 		  utf-8
-
-
-# Permalinks
-permalink:        pretty
+permalink:           pretty
 
 # Setup
-title:            김로그
-tagline:          ''
-description:      '2016.01'
-url:              http://gnujoow.github.io/
-baseurl:          /
-description:      "머신러닝을 공부하고 있는 백수의 블로그"
+title:               김로그
+tagline:             ''
+description:         "머신러닝을 공부하고 있는 백수의 블로그"
+url:                 http://gnujoow.github.io/
+baseurl:             ''
 
-excerpt_separator: "" #코드때문에
-
-#
-author:
-  name:           'WJ'
-  url:            #https://twitter.com/mdo
-
-#pagination
+#paginate
 gems: [jekyll-paginate]
-paginate:         5
+paginate: 5
 paginate_path: "page:num"
 
+# About/contact
+author:
+  name:              gnujoow
+  url:               http://github.com/gnujoow
+  email:             gnujoow.kim@gmail.com
+
 # Custom vars
-github:
-  repo:           https://github.com/gnujoow
+version:             1.0.0
