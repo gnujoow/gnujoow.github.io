@@ -2,7 +2,7 @@
 layout: post
 title: dynamic programming
 category: [ALGO]
-tag: [Algorithm, Dynamic Programing, dp]
+tag: [Algorithm, DynamicPrograming, dp]
 description: 다이나믹 프로그래밍에 대해서 알아보자.
 ---
 
