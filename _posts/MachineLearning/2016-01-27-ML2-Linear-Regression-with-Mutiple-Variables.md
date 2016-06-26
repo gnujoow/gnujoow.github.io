@@ -1,4 +1,4 @@
----
+ia---
 layout: post
 title: 2.Multivariate Linear Regression
 category: [ML]
@@ -17,10 +17,10 @@ Notation:
  - \\( n\\) : 특징들의 갯수
  - \\( x^{(i)}\\) : i번째 트래이닝 예(training example)의  입력(특징)
  - \\( x_j^{(i)}\\) : i번째 트래이닝 예의 j번째 특징의 값
- 
+
 여기서 우리는 침실, 층, 그리고 지어진 연도와 크기 총 4개의 특징이 있으므로\\\(n=4\\)가된다.
 
-그럼 **변수가 여럿인 선형회귀(Multivariate Linear Regression)**의 **가설함수(hypothesis function)**는 어떻게 되는지 알아보자
+그럼 **변수가 여럿인 선형회귀(Multivariate Linear Regression)** 의 **가설함수(hypothesis function)** 는 어떻게 되는지 알아보자
 
 변수가 1개인 선형회귀의 가설함수는 아래와 같이 표현하였다.
 
@@ -88,7 +88,7 @@ $\theta_j := \theta_j + \alpha \frac{\partial}	{\partial \theta_j} J(\theta)$
 
 이제 본격적으로 변수가 여러개일 때 회귀문제에 접근해보자.
 우선 모델의 특징들을 살펴보면 방의 수, 층 수, 지어진년도, 가격, 크기가 있다. 이 변수들의 범위는 대략적으로
- 
+
   - size : 0~ 3000
   - 방의수 : 1~ 10
   - 연도 : 0 ~ 40년
@@ -98,9 +98,9 @@ $\theta_j := \theta_j + \alpha \frac{\partial}	{\partial \theta_j} J(\theta)$
 
 ![예](/assets/posts/MachineLearning/ml2-2.png)
 
-이렇게 되면 Gradient Descent 알고리즘을 적용하여 최소값을 찾는데 시간이 오래걸린다. 이를 해결하기 위해 각 특징들을 같은 비슷한 범위로 **크기변환(Scaling)**을 해준다. 각 특징들을 특징들이 가진 최대값으로 나눈다면 특징들의 범위는 \\( 0<x^{(i)}) <1\\)이 되어 계산하기 편해진다.
+이렇게 되면 Gradient Descent 알고리즘을 적용하여 최소값을 찾는데 시간이 오래걸린다. 이를 해결하기 위해 각 특징들을 같은 비슷한 범위로 **크기변환(Scaling)** 을 해준다. 각 특징들을 특징들이 가진 최대값으로 나눈다면 특징들의 범위는 \\( 0<x^{(i)}) <1\\)이 되어 계산하기 편해진다.
 
-다른 크기변환(scaling)방법으로는 **mean normalization**이 있다.
+다른 크기변환(scaling)방법으로는 **mean normalization** 이 있다.
 mean normalization은 모든 특징들을 \\( -1 \<= x_i \<= 1\\)범위에 들어가도록 근사화하는 것이다. 이는 간단히 아래식으로 근사화 할 수 있다.
 
 <div>
@@ -116,7 +116,7 @@ $$
 
 ![예](/assets/posts/MachineLearning/ml2-3.png)
 
-우선 잘 못된 \\( \alpha \\) 값을 선택할 경위 위와 같은 잘 못된 결과를 얻게된다. 왼쪽 위의 그래프는 너무 큰 \\( \alpha\\)값을 선택하여 최소점에 도달하지 못하고 계속 증가하게 되며 오른쪽 그래프는 충분히\\( \alpha\\)작지 않은 \\( \alpha\\)값을 선택하여 overshooting이 일어났다. 마지막으로 왼쪽 아래의 그래프는 바로 전 상황과 같이 충분히 작지 않은 \\( \alpha\\)값을 선택하여 최소점을 찾지 못하였다. 따라서 최소점을 찾기 위해서는 **충분히 작은 \\( \alpha\\)(learning rate)**값을 선택해야한다.
+우선 잘 못된 \\( \alpha \\) 값을 선택할 경위 위와 같은 잘 못된 결과를 얻게된다. 왼쪽 위의 그래프는 너무 큰 \\( \alpha\\)값을 선택하여 최소점에 도달하지 못하고 계속 증가하게 되며 오른쪽 그래프는 충분히\\( \alpha\\)작지 않은 \\( \alpha\\)값을 선택하여 overshooting이 일어났다. 마지막으로 왼쪽 아래의 그래프는 바로 전 상황과 같이 충분히 작지 않은 \\( \alpha\\)값을 선택하여 최소점을 찾지 못하였다. 따라서 최소점을 찾기 위해서는 **충분히 작은 \\( \alpha\\)(learning rate)** 값을 선택해야한다.
 
 하지만 너무 작은 \\(\alpha\\)값을 선택한다면 하강하는 폭이 너무 작아 최소점을 찾는데 너무 많은 시간이 걸리게 된다.
 
@@ -169,10 +169,10 @@ $$
 
 ![예](/assets/posts/MachineLearning/ml2-5.png)
 
-**normal equation** : 
-\\( 
+**normal equation** :
+\\(
 \large
-\theta = (X^T X)^{-1}X^T y 
+\theta = (X^T X)^{-1}X^T y
 \\)
 
 normal equation의 특징 중 하나는 feature scaling을 할 필요없다는 것이다.  normal equation과 gradient descent의 차이는 아래표와 같다.
