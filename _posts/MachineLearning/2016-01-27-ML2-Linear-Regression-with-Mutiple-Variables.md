@@ -1,4 +1,4 @@
-ia---
+---
 layout: post
 title: 2.Multivariate Linear Regression
 category: [ML]
