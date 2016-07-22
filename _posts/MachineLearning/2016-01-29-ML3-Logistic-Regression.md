@@ -24,18 +24,18 @@ description: Logistic Regression을 통해 classification문제를 푸는 방법
 
 만약 classcification을 통해 y가 0 또는 1 로 분류하고 싶을 때 linear regression의 가설함수 h(x)는 0보다 작거나 1보다 큰 경우가 있어 적절하지 않다.
 
-따라서 **가설함수(hypothesis function)**의 값이 0과 1사이인 **Logistic Regression**에 대해서 알아보도록 하자. Regression이란 이름이 나와서 당황스러울수도 있지만 Logistic Regression 알고리즘은 사실 classification문제에 사용하는 알고리즘 중 하나이다.
+따라서 **가설함수(hypothesis function)** 의 값이 0과 1사이인 **Logistic Regression** 에 대해서 알아보도록 하자. Regression이란 이름이 나와서 당황스러울수도 있지만 Logistic Regression 알고리즘은 사실 classification문제에 사용하는 알고리즘 중 하나이다.
 
 ## Hypothesis Representation
 
-그럼 **분류(classification)**문제에서 **가설함수(hypothesis function)**를 어떻게 표현하는지 알아보자. 
+그럼 **분류(classification)** 문제에서 **가설함수(hypothesis function)** 를 어떻게 표현하는지 알아보자.
 
 <div>
-범위가 $0 \leq h_\theta (x) \leq 1$인 logistic model을 표현하는 가설함수는 $  h_\theta (x) =  g ( \theta^T x )$로 표현한다. 
+범위가 $0 \leq h_\theta (x) \leq 1$인 logistic model을 표현하는 가설함수는 $  h_\theta (x) =  g ( \theta^T x )$로 표현한다.
 <br><br>linear regression의 가설함수와 비교하면 $g()$가 $\theta^Tx$(linear regression의 가설함수)를 감싸고있는걸 알 수 있다.
 </div>
 
-\\(g(z) = \dfrac{1}{1 + e^{-z}} \\)는 **sigmoid function**혹은 **logistic function**이라고 한다.
+\\(g(z) = \dfrac{1}{1 + e^{-z}} \\)는 **sigmoid function** 혹은 **logistic function** 이라고 한다.
 
 ![sigmoid function](/assets/posts/MachineLearning/ml3-2.png)
 
@@ -58,13 +58,13 @@ $
 
 ![decision boundary](/assets/posts/MachineLearning/ml3-3.png)
 
-logistic function에서 z가 0보다 크면 g(z)는 항상 0.5보다 크다. 그리고 z가 0보다 작으면 항상 g(z)는 0.5보다 작다. 자연로그의 특성을 이용해서 logistic function의 성질을 정리하면 
+logistic function에서 z가 0보다 크면 g(z)는 항상 0.5보다 크다. 그리고 z가 0보다 작으면 항상 g(z)는 0.5보다 작다. 자연로그의 특성을 이용해서 logistic function의 성질을 정리하면
 
 <div>
 \begin{align*}
-z=0,  e^{0}=1,  g(z)=1/2\newline 
+z=0,  e^{0}=1,  g(z)=1/2\newline
 z \to \infty, e^{-\infty} \to 0, g(z)=1 \newline
- z \to -\infty, e^{\infty}\to \infty, g(z)=0 
+ z \to -\infty, e^{\infty}\to \infty, g(z)=0
 \end{align*}
 </div>
 
@@ -95,7 +95,7 @@ z \to \infty, e^{-\infty} \to 0, g(z)=1 \newline
 
 ## Cost function
 
-아쉽게도 Linear regression에서 사용했던 **비용함수(cost function)**을 사용할 수 없다. 그 이유는 linear regression의 비용함수를 사용하면 결과가 너무 구불구불(wavy)하게 나오기 때문이다. 그렇게 되면 지역 최적점(local optima)가 생겨 전역 최소점(global minimum)을 찾기 어려워진다. ~~맞게 해석한건지 모르겠다.~~ 다르게 설명하자면 linear regression의 비용함수를 사용하면 볼록한 함수(convex function)가 되지 않기 때문이다.
+아쉽게도 Linear regression에서 사용했던 **비용함수(cost function)** 을 사용할 수 없다. 그 이유는 linear regression의 비용함수를 사용하면 결과가 너무 구불구불(wavy)하게 나오기 때문이다. 그렇게 되면 지역 최적점(local optima)가 생겨 전역 최소점(global minimum)을 찾기 어려워진다. ~~맞게 해석한건지 모르겠다.~~ 다르게 설명하자면 linear regression의 비용함수를 사용하면 볼록한 함수(convex function)가 되지 않기 때문이다.
 
 logistic regression에서 사용하는 비용함수는 아래와 같다.
 
@@ -201,11 +201,11 @@ J(\theta) = - \frac{1}{m} \displaystyle \sum_{i=1}^m [y^{(i)}\log (h_\theta (x^{
 </div>
 
 최적의 \\( \theta\\)를 구하는 방법은 gradient descent알고리즘 뿐만 아니라
- 
+
   - [**Conjugate gradient**](https://ko.wikipedia.org/wiki/%EC%BC%A4%EB%A0%88%EA%B8%B0%EC%9A%B8%EA%B8%B0%EB%B2%95)
   - [**BFGS**](https://en.wikipedia.org/wiki/Broyden%E2%80%93Fletcher%E2%80%93Goldfarb%E2%80%93Shanno_algorithm)
   - [**L-BFGS**](https://en.wikipedia.org/wiki/Limited-memory_BFGS)
-  
+
 등 다양한 알고리즘이 존재한다.
 
 Gradient descent알고리즘과 비교했을 때 위 세 알고리즘의 장점은 \\(\alpha\\)(learning rate)를 선택하지 않아도 된다는 점과 gradient descent알고리즘보다 빠른경우가 많기 때문이다. 단점은 알고리즘이 gradient descent보다 복잡하지만 우리는 라이브러리를 사용하면 되기떄문에 다행이다. ㅋ_ㅋ
@@ -233,9 +233,10 @@ One vs All은 n개의 원소에 대해서 n+1개의 binary classification 문제
 
 
 이번 포스팅은 너무 날림으로 한 것같다. ㅠㅠ
- 
+
 
 ---
+
 ## Reference
 
   - [Cousera Machine Learning class by Andrew Ng](https://www.coursera.org/learn/machine-learning/home/week/3)

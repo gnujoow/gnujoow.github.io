@@ -140,7 +140,7 @@ h(x) = \theta_0 + \theta_1 집의 가로폭 + \theta_2 집의세로폭
 $$
 </div>
 
-하지만 이렇게 접근하기 보다는 새로운 특성 **넓이**를 만들어 접근하는게 더 낫다. 이를테면 넓이는 가로와 세로의 곱이니까 새로운 특징으로 가설함수를 만들면
+하지만 이렇게 접근하기 보다는 새로운 특성 **넓이** 를 만들어 접근하는게 더 낫다. 이를테면 넓이는 가로와 세로의 곱이니까 새로운 특징으로 가설함수를 만들면
 
 <div>
 $$
@@ -161,7 +161,7 @@ $$
 
 ## Computing Parameters Analytically
 
-몇몇 선형회귀 문제에 대해서 **normal equation**를 이용하면 최적의 \\( \theta \\)값을 찾기 수월하다.
+몇몇 선형회귀 문제에 대해서 **normal equation** 를 이용하면 최적의 \\( \theta \\)값을 찾기 수월하다.
 
 전역 최소점(global minimum)을 찾기 위해서 gradient algorithm을 사용했다. 알고리즘이 반복적으로 연산하면 점점 \\( \theta \\)값에 근접하게되고 최소값을 얻을 수 있다.
 
@@ -190,7 +190,7 @@ normal equation의 시간복잡도는 약 \\(\mathcal{O}(n^3) \\)가 된다. And
 
 ---
 
-### reference
+## reference
 
  - [Cousera course wiki](https://share.coursera.org/wiki/index.php/ML:Linear_Regression_with_Multiple_Variables#Polynomial_Regression)
  - [Machine Learning by Andrew Ng](https://www.coursera.org/learn/machine-learning/home/week/2)

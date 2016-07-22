@@ -6,7 +6,7 @@ tag: [Machine Learning, Supervised Learning,Overfitting, Linear Regression, Logi
 description: 정규화(regulariation)을 통해 과적합(overfitting)문제를 해결하는 방법에 대해서 알아보자.
 ---
 ## The problem of overfitting
-이전 포스팅에서 Linear Regression, Logistic Regression을 통해 Regression문제와 Classification문제를 풀 수 있음을 알아 보았다. 이 두 알고리즘은 꽤 많은 기계학습 문제를 풀 수 있다. 하지만 이러한 기계학습 응용프로젝트는 종종 **과적합 문제(overfitting problem)** 문제를 야기한다. 이번 포스팅에서는 **정규화(Regularization)**를 통해 과적합 문제를 해결하는 방법에 대해서 알아보자.
+이전 포스팅에서 Linear Regression, Logistic Regression을 통해 Regression문제와 Classification문제를 풀 수 있음을 알아 보았다. 이 두 알고리즘은 꽤 많은 기계학습 문제를 풀 수 있다. 하지만 이러한 기계학습 응용프로젝트는 종종 **과적합 문제(overfitting problem)** 문제를 야기한다. 이번 포스팅에서는 **정규화(Regularization)** 를 통해 과적합 문제를 해결하는 방법에 대해서 알아보자.
 
 시작하기 앞서 과적합(overfittin) 이란 무엇인지 짚고 넘어가자.
 
@@ -14,9 +14,9 @@ description: 정규화(regulariation)을 통해 과적합(overfitting)문제를 
 
 ![](/assets/posts/MachineLearning/ml4-0.png)
 
-같은 모델을 각각 다른 가설함수(hypothesis function)으로 나타냈다. 가장 왼쪽에 1차함수로 표현한 모델은 사이즈가 증가함에 따라 가격이 증가하는 것을 잘 표현했지만 **데이터 모델(training data model)**에 대해서 정확하게 표현했다고 하기 어렵다. 이런 경우를 **Underfit**이라고 하고 다른 말로 **High bias**라고 한다.
+같은 모델을 각각 다른 가설함수(hypothesis function)으로 나타냈다. 가장 왼쪽에 1차함수로 표현한 모델은 사이즈가 증가함에 따라 가격이 증가하는 것을 잘 표현했지만 **데이터 모델(training data model)** 에 대해서 정확하게 표현했다고 하기 어렵다. 이런 경우를 **Underfit** 이라고 하고 다른 말로 **High bias** 라고 한다.
 
-가장 오른쪽의 표현을 살펴보자. 각각의 데이터 모델에 대하여 정확하게 표현되었지만 곡선이 요동치는 것을 볼 수 있다. 직관적으로 집 가격 모델을 잘 표현했다고 하기 어렵다. 이런 경우를 **과적합(overfitting)**이라고 하며 다른 말로 **hight varience**라고 한다.
+가장 오른쪽의 표현을 살펴보자. 각각의 데이터 모델에 대하여 정확하게 표현되었지만 곡선이 요동치는 것을 볼 수 있다. 직관적으로 집 가격 모델을 잘 표현했다고 하기 어렵다. 이런 경우를 **과적합(overfitting)** 이라고 하며 다른 말로 **hight varience** 라고 한다.
 
 가운데 처럼 모델을 잘 표현한 경우는 딱히 이름이 없지만 just right이라고 하자. 가운데 경우 직관적으로 보았을 때 집 모델을 잘 표현했다고 할 수 있다.
 
@@ -44,7 +44,7 @@ Logistic Regression에서도 마찬가지로 가장 왼쪽의 모델표현은 �
 Quardratic Linear Regression의 hypothesis $\theta_0 + \theta_1x + \theta_2x^2 + \theta_3x^3 + \theta_4x^4$ 가 있고 overfitting문제가 있다고 가정하자. 그리고 우리는 $\theta_3x^3$과 $\theta_4x^4$의 영향을 줄여 overfitting 문제를 개선하고자 한다 어떻게 하면 될까?
 </div>
 
-아이디어는 바로 **비용함수(cost function)**을 바꾸는 데에 있다. 알다시피 비용함수는 가설함수의 각항의 개수가 되는 최적의\\(\theta\\)를 구하는 식이다. 가설함수의 표현을 바꾸거나 몇몇 특징을 포기하는 대신 비용함수를 수정함으로써 과적합을 개선할 수 있다. 위 문제의 경우 아래와 같은 비용함수를 사용하면 될 것이다.
+아이디어는 바로 **비용함수(cost function)** 을 바꾸는 데에 있다. 알다시피 비용함수는 가설함수의 각항의 개수가 되는 최적의\\(\theta\\)를 구하는 식이다. 가설함수의 표현을 바꾸거나 몇몇 특징을 포기하는 대신 비용함수를 수정함으로써 과적합을 개선할 수 있다. 위 문제의 경우 아래와 같은 비용함수를 사용하면 될 것이다.
 
 <div>
 $$
@@ -72,12 +72,12 @@ $
 
 가 된다. 여기서 눈 여겨 볼점은 두번째 항인 람다 어쩌고 인데 0이 아닌 1부터 시작한다는 점이다. 사실은 실제 문제를 풀때는 상수항도 regularize를 해야할 경우도 있으므로 모든 \\(\theta\\)에 대해서 regularize를 해야한다. (내가 잘 못 알아들은 것같기도 하고...)
 
-여튼 Regularization을 통해 더 간단한 가설함수를 도출해 낼 수 있고 과적합 문제도 해결할 수 있다. 
-위에 비용함수식에서 두번째 항을 **Regularization Term**이라고 하고 \\(\lambda\\)를 **Regularization Parameter**라고 한다.
+여튼 Regularization을 통해 더 간단한 가설함수를 도출해 낼 수 있고 과적합 문제도 해결할 수 있다.
+위에 비용함수식에서 두번째 항을 **Regularization Term** 이라고 하고 \\(\lambda\\)를 **Regularization Parameter** 라고 한다.
 
 비용함수식의 각 항의 역할에 대해서 알아보도록 하자. 첫번째 항 그러니까 우리가 익숙히 보던 원래 비용함수꼴은 데이터 셋(training set)에 대해서 잘 맞게(fit) 함수를 훈련시키는 것이다. 두번째 Regularization Term의 역할은 각항의 계수를 작게 만들어 가설함수를 간단하게 하고 과적합을 피하게 한다.
 
-그렇다면 \\(\lambda\\)가 너무 클 경우 어떻게 될까? 이를 테면 막 \\(10^10\\)정도 된다고한다면... 아마 상수항을 제외한 모든 항의 계수는 0에 가까워 질 것이고 이로 인해 도출되는 비용함수는 거의 상수항에 가까워 지게 되서 underfit이 될것이다. 따라서 Regularization을 잘 하기 위해서는 **적절한 \\(\lambda\\)선택**이 중요하다.
+그렇다면 \\(\lambda\\)가 너무 클 경우 어떻게 될까? 이를 테면 막 \\(10^10\\)정도 된다고한다면... 아마 상수항을 제외한 모든 항의 계수는 0에 가까워 질 것이고 이로 인해 도출되는 비용함수는 거의 상수항에 가까워 지게 되서 underfit이 될것이다. 따라서 Regularization을 잘 하기 위해서는 **적절한 \\(\lambda\\)선택** 이 중요하다.
 
 ## Regularized Linear Regression
 
@@ -105,7 +105,7 @@ J는 0을 포함하지 않는데 이는 바로 이전에서 설명했듯이 \\(x
 \end{align*}
 </div>
 
-위 식에서 \\(1 - \alpha\frac{\lambda}{m}\\)는 항상 1보다 작다. 그리고 뒷 부분은 원래 Gradient Descent와 똑같다. 직관적으로 생각했을때 항상 \\(\theta_j\\)는 작아진 값으로 업데이트 된다. 
+위 식에서 \\(1 - \alpha\frac{\lambda}{m}\\)는 항상 1보다 작다. 그리고 뒷 부분은 원래 Gradient Descent와 똑같다. 직관적으로 생각했을때 항상 \\(\theta_j\\)는 작아진 값으로 업데이트 된다.
 
 ### Normal Equation
 
@@ -120,7 +120,7 @@ normal equation의 regularization은 행렬 곱을 추가하는 것 외에 원�
 <div>
 \begin{align*}
 & \theta = \left( X^TX + \lambda \cdot L \right)^{-1} X^Ty \newline
-& \text{where}\ \ L = 
+& \text{where}\ \ L =
 \begin{bmatrix}
  0 & & & & \newline
  & 1 & & & \newline
@@ -134,7 +134,7 @@ normal equation의 regularization은 행렬 곱을 추가하는 것 외에 원�
 행렬\\(L\\)는 맨위 안 왼쪽의 항의 0인 diagonal matrix이다.(1이 표시되지 않은 영역은 모두 0이다.) 그리고 주어진 n에 대해서 \\((n+1)(n+1)\\)꼴을 띈다.
 
 
-**Non-invertibility**생략
+**Non-invertibility** 생략
 
 
 ## Regularized Logistic Regression
@@ -157,5 +157,5 @@ Linear Regression 때와 같이 \\(\theta_0\\)에 대해서는 따로 업데이�
 
 ---
 ## Reference
-  
+
   - [Coursera Machine Learning course by Andrew Ng](https://www.coursera.org/learn/machine-learning/lecture/4BHEy/regularized-logistic-regression)

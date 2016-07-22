@@ -162,8 +162,8 @@ code {
 pre {
   display: block;
   margin-top: 0;
-  margin-bottom: 1rem;
-  /*padding: 1rem;*/
+  /*margin-bottom: 1rem;*/
+  padding: 0.2rem;
   font-size: .8rem;
   line-height: 1.4;
   white-space: pre;
@@ -181,7 +181,7 @@ pre code {
 
 /* Pygments via Jekyll */
 .highlight {
-  margin-bottom: 1rem;
+  /*margin-bottom: 1rem;*/
   border-radius: 4px;
 }
 .highlight pre {
@@ -236,7 +236,7 @@ img {
 
 /* Tables */
 table {
-  margin-bottom: 1rem;
+  /*margin-bottom: 1rem;*/
   width: 100%;
   border: 1px solid #e5e5e5;
   border-collapse: collapse;

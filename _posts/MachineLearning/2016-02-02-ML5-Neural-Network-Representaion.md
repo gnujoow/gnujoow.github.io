@@ -6,7 +6,7 @@ tag: [Machine Learning, Neural Networks]
 description: 인공 신경망(artificial neural network)에 대해서 알아보고 표현에 대해서 알아보자.
 ---
 
-이번 포스팅과 그리고 다음에 올릴 포스팅에서 **신경망(Neural Network)**에 대해서 알아본다. 신경망은 꽤 오래된 아이디어이고 잠시 사람들 관심 밖의 아이디어였지만 오늘날에는 여러 기계학습문제에 관련해서 중요한 축으로 자리잡았다. 우리는 이미 Linear Regression이랑 Logistic regression을 배웠는데 (게다가 교수님이 우리가 많이 안다고 하셨는데) 왜 신경망 알고리즘을 알아야 할까? 다음 예를 보면서 알아보도록 하자.
+이번 포스팅과 그리고 다음에 올릴 포스팅에서 **신경망(Neural Network)** 에 대해서 알아본다. 신경망은 꽤 오래된 아이디어이고 잠시 사람들 관심 밖의 아이디어였지만 오늘날에는 여러 기계학습문제에 관련해서 중요한 축으로 자리잡았다. 우리는 이미 Linear Regression이랑 Logistic regression을 배웠는데 (게다가 교수님이 우리가 많이 안다고 하셨는데) 왜 신경망 알고리즘을 알아야 할까? 다음 예를 보면서 알아보도록 하자.
 
 ## Non-linear Hypotheses
 
@@ -33,7 +33,7 @@ $
 
 그러나 이 함수들로 경계를 표현하기에는 training set을 특징들을 정확히 표현 할 수 없다.
 
-거의 모든 머신러닝 문제들은 **특징(n)**이 매우 크다. 다음 예를 살펴보자.
+거의 모든 머신러닝 문제들은 **특징(n)** 이 매우 크다. 다음 예를 살펴보자.
 
 컴퓨터공학이나 전자공학을 전공했다면 [영상처리](https://ko.wikipedia.org/wiki/%EC%98%81%EC%83%81_%EC%B2%98%EB%A6%AC), 혹은 [컴퓨터비전](http://terms.naver.com/entry.nhn?docId=818632&cid=50376&categoryId=50376)라는 단어를 들어본적이 있을것이다. 우리가 눈으로 보기에는 간단한 문제들이 왜 컴퓨터한테는 어려울까?
 
@@ -47,11 +47,11 @@ $
 
 여러 그림들의 특정 위치 pixel1, pixel2를 가지고 자동차인지 아닌지 구별하고 그래프로 나타내보자. 원래 이미지의 pixel1의 특징과 pixel2의 특징이 어디서 나타나는지 그래프로 표현해보고 차인지 아닌지 더 많은 예를 통해서 그려보면 아래와 같은 그래프가 나타나게 된다. 그럼 이 그래프를 2클래스로 나눌수 있다. 그럼 feature space의 dimension은 어떻게 될까? 가로세로가 각각 50인 그림이 있다면 총 그림에 2500개의 픽셀이 존재한다. 그럼 2500개의 특징이 존재한다. 이것을 Quadratic features로 나타내면 \\(\frac {n^2}{2}\\)이므로 약 3백만개의 특징이 존재하며 컴퓨터가 일일이 계산하기에는 너무 큰 시간이 소요된다.
 
-따라서 특징이 많은 모델에 대해서 logistic regression을 적용하기에는 적절하지 않다. 
+따라서 특징이 많은 모델에 대해서 logistic regression을 적용하기에는 적절하지 않다.
 
 ## Neurons and the brain
 
-**신경망 알고리즘(Neural Network Algorithm)**은 기계가 사람의 뇌를 흉내내려고 만든 오래된 알고리즘이다.
+**신경망 알고리즘(Neural Network Algorithm)** 은 기계가 사람의 뇌를 흉내내려고 만든 오래된 알고리즘이다.
 
 80대 그리고 90년도 초에 널리쓰였지만 여러가지 이유로 90년 말에 들어서 인기가 줄어들었다. 아마도 주된 이유는 컴퓨터의 메모리와 속도가 지금보다 느렸기 때문일것이다.
 
@@ -90,15 +90,15 @@ $
 
 인공 신경망(artificial neural network)에서는 뉴런들이 하는 일을 컴퓨터가 하도록 적용하였다. 뉴런 하나하나를 logistic unit으로 하고 단순화한 모델을 사용한다.
 
-앞서 살펴본바와 같이 뉴런은 하나의 계산 유닛이다. **dendrites**로 부터 전기적 신호 spikes를 입력을 받고 처리한 후 Axon을 통해서 출력한다.
+앞서 살펴본바와 같이 뉴런은 하나의 계산 유닛이다. **dendrites** 로 부터 전기적 신호 spikes를 입력을 받고 처리한 후 Axon을 통해서 출력한다.
 
 인공 신경망에서는 dendrites는 입력되는 틍징들이며 Axon은 가설함수의 결과로 나타낸다.
 
-강의를 하시는 Andrew Ng교수님은 보통 input wire를 x1,2,3만 그리시지만 경우에 따라 **bias unit**혹은 **bias neuron**인 x0를 같이 그려주는것이 표기상 편할 때도 있다. 그리고 블로그를 찾아보니 bias unit은 입력 값에 대한 가중치들이 편향되지 않게 하는 기능도 있다고 한다.
+강의를 하시는 Andrew Ng교수님은 보통 input wire를 x1,2,3만 그리시지만 경우에 따라 **bias unit** 혹은 **bias neuron** 인 x0를 같이 그려주는것이 표기상 편할 때도 있다. 그리고 블로그를 찾아보니 bias unit은 입력 값에 대한 가중치들이 편향되지 않게 하는 기능도 있다고 한다.
 bias unit의 값은 1이다.
 
 앞서 말한바와 같이 뉴런하나하나를 logistic  unit으로 단순화 한다. 인공 신경망에서는 classfication에서 사용했던 sigmoid function을 사용하는데, 이것을
- **sigmoid(logistic) activation function** 혹은 **artificial neuron with sidmoid**라고 부른다.
+ **sigmoid(logistic) activation function** 혹은 **artificial neuron with sidmoid** 라고 부른다.
 표현은 \\(g(z)\\)로 한다.
 
 \\(\theta\\)는 nueral network에서 weight라고 부르기도 한다. 하나의 뉴런을 간단하게 나타내면 아래와 같이 표현할 수 있다.
@@ -121,7 +121,7 @@ $
 
 ![예1](/assets/posts/MachineLearning/ml5-8.png)
 
-logistic unit들이 모여서 형성된 neural network를 살펴보자. 용어정리를 간단히 하자만 가장 왼쪽의 x노드들을 **input layer** 가장 오른쪽의 노란색노드를 **output layer**그리고 가운데 노드를 **hidden layer**라고 한다. 
+logistic unit들이 모여서 형성된 neural network를 살펴보자. 용어정리를 간단히 하자만 가장 왼쪽의 x노드들을 **input layer** 가장 오른쪽의 노란색노드를 **output layer** 그리고 가운데 노드를 **hidden layer** 라고 한다.
 
 아까 언급했던 바와 같이 bias unit을 추가하여 네트워크를 구성할 수 있다.
 
@@ -183,14 +183,14 @@ x와 \\(z^{(j)}\\)의 벡터표현은 아래와 같다.
 <div>
 $
 \begin{align*}
-x = 
+x =
 \begin{bmatrix}
 x_0 \newline
 x_1 \newline
 \cdots \newline
 x_n
 \end{bmatrix} &
-z^{(j)} = 
+z^{(j)} =
 \begin{bmatrix}
 z_1^{(j)} \newline
 z_2^{(j)} \newline
@@ -233,7 +233,7 @@ $
 
 <div>
 $
-\Theta^{(1)} = 
+\Theta^{(1)} =
 \begin{bmatrix}-20 & 30 & 30\end{bmatrix}
 $
 </div>
@@ -262,10 +262,10 @@ AND:\newline
 \Theta^{(1)} &=
 \begin{bmatrix}-30 & 20 & 20\end{bmatrix} \newline
 NOR:\newline
-\Theta^{(1)} &= 
+\Theta^{(1)} &=
 \begin{bmatrix}10 & -20 & -20\end{bmatrix} \newline
 OR:\newline
-\Theta^{(1)} &= 
+\Theta^{(1)} &=
 \begin{bmatrix}-10 & 20 & 20\end{bmatrix} \newline
 \end{align*}
 $
@@ -273,7 +273,7 @@ $
 
 위와 같이 theta matrix의 값만 바꿔주면 된다.
 
-그럼 XNOR같은 연산은 어떻게 할까? 
+그럼 XNOR같은 연산은 어떻게 할까?
 
 ![예1](/assets/posts/MachineLearning/ml5-11.png)
 
@@ -287,7 +287,7 @@ x_2
 \end{bmatrix} \rightarrow
 \begin{bmatrix}
 a_1^{(2)} \newline
-a_2^{(2)} 
+a_2^{(2)}
 \end{bmatrix} \rightarrow
 \begin{bmatrix}
 a^{(3)}
@@ -301,7 +301,7 @@ $
 
 <div>
 $
-\Theta^{(1)} = 
+\Theta^{(1)} =
 \begin{bmatrix}
 -30 & 20 & 20 \newline
 10 & -20 & -20
@@ -313,7 +313,7 @@ $
 
 <div>
 $
-\Theta^{(2)} = 
+\Theta^{(2)} =
 \begin{bmatrix}-10 & 20 & 20\end{bmatrix}
 $
 </div>
@@ -340,6 +340,6 @@ $
 ---
 
 ## reference
- 
+
  - [courser machine learning by Andrew Ng](https://www.coursera.org/learn/machine-learning/lecture/ka3jK/model-representation-i)
  - [인공 신경망에 관한 설명](http://poohrusa.tistory.com/1283)
