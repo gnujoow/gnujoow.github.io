@@ -4,7 +4,6 @@ title: About
 ---
 
 ## 김우정
-  - [Notefan](https://3000won.com/) 프론트엔드 인턴
   - 건국대학교 전자공학부 졸업
   - [건국대학교 멋쟁이사자처럼](https://www.facebook.com/likelionkonkuk/?fref=ts) 4기 건국대학교 운영진
   - [건국대학교 멋쟁이사자처럼](https://www.facebook.com/likelionkonkuk/?fref=ts) 3기 팀장
@@ -13,13 +12,16 @@ title: About
 
 ---
 
-## 해본거
-
-  - **Language**
-
-  `c` `c++` `python` `ruby` `AVR assembly` `ARM assembly` `VHDL` `Verilog` `HTML` `CSS` `Javascript`
-
 ## contact
 
- - [linkedin](https://kr.linkedin.com/in/wjkim90)
- - email : gnujoow.kim at gmail dot com
+<div>
+<a href="https://kr.linkedin.com/in/wjkim90" style="float: left; width: 33%;">
+  <img src="/assets/img/linkedin.png" />
+</a>
+<a href="http://github.com/gnujoow" style="float: left; width: 33%;">
+  <img src="/assets/img/github.png" />
+</a>
+<a href="mailto:gnujoow.kim@gmail.com" style="float: left; width: 33%;">
+  <img src="/assets/img/email.png" />
+</a>
+</div>
