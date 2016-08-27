@@ -10,7 +10,9 @@ title: Home
       <font color="#707070">
         {{ post.date | date: "%Y-%m-%d" }}
       </font>
-      <code>{{ post.category }}</code>
+      <a href="/category/#{{ post.category }}">
+        <code>{{ post.category }}</code>
+      </a>
       <a href="{{ post.url }}">
         {{ post.title }}
       </a>
