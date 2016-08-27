@@ -161,3 +161,7 @@ class Node{
 # 특징  
 - stack과 queue그리고 array가 packed 인 자료구조라면
  linked list는 unpacked이다.  
+
+## reference
+ - [이석호. C++ 자료구조론 (2nd ed.). 인피니티북스](http://www.yes24.com/24/goods/2656393)
+ - [wikipedia Linked List](https://en.wikipedia.org/wiki/Linked_list)
