@@ -6,6 +6,9 @@ tag: [Machine Learning, Supervised Learning, Unsupervised Learning]
 description: 머신러닝이란 무엇일까? 머신러닝의 종류와 예를 통해 머신러닝이 무엇인지 알아보자.
 ---
 
+[Coursera](https://www.coursera.org/)에서 제공하는 [Machine learning by Andrew ng](https://www.coursera.org/learn/machine-learning/) 을 보고 포스팅하였습니다.
+
+---
 
 머신러닝이란 무엇일까? 우리는 모르고있지만 이미 일상 생활속에서 많이 사용하고 있다.
 

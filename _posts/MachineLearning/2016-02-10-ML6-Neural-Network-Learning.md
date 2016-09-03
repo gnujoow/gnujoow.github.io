@@ -6,8 +6,9 @@ tag: [Machine Learning, Neural Networks, backprogagation]
 description: 신경망 알고리즘은 가장 좋은 학습알고리즘 중 하나이다. 이번 포스팅에서는 주어진 데이터와 변수에 대해 알고리즘을 적용하는 방법을 알아보자.
 ---
 
-신경망 알고리즘은 가장 좋은 학습알고리즘 중 하나이다. 이번 포스팅에서는 주어진 데이터와 변수에 대해 알고리즘을 적용하는 방법을 알아보자.
+[Coursera](https://www.coursera.org/)에서 제공하는 [Machine learning by Andrew ng](https://www.coursera.org/learn/machine-learning/) 을 보고 포스팅하였습니다.
 
+---
 
 ## Cost Function
 

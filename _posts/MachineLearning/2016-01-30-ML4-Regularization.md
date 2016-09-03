@@ -5,6 +5,10 @@ category: [ML]
 tag: [Machine Learning, Supervised Learning,Overfitting, Linear Regression, Logistic Regression, Regularization]
 description: 정규화(regulariation)을 통해 과적합(overfitting)문제를 해결하는 방법에 대해서 알아보자.
 ---
+
+[Coursera](https://www.coursera.org/)에서 제공하는 [Machine learning by Andrew ng](https://www.coursera.org/learn/machine-learning/) 을 보고 포스팅하였습니다.
+
+---
 ## The problem of overfitting
 이전 포스팅에서 Linear Regression, Logistic Regression을 통해 Regression문제와 Classification문제를 풀 수 있음을 알아 보았다. 이 두 알고리즘은 꽤 많은 기계학습 문제를 풀 수 있다. 하지만 이러한 기계학습 응용프로젝트는 종종 **과적합 문제(overfitting problem)** 문제를 야기한다. 이번 포스팅에서는 **정규화(Regularization)** 를 통해 과적합 문제를 해결하는 방법에 대해서 알아보자.
 

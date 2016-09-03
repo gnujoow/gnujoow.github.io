@@ -7,6 +7,9 @@ description: 이번 포스팅에서는 bias와 varriance에 대해서 깊게 알
 
 ---
 
+[Coursera](https://www.coursera.org/)에서 제공하는 [Machine learning by Andrew ng](https://www.coursera.org/learn/machine-learning/) 을 보고 포스팅하였습니다.
+
+---
 우리가 생각한대로 머신러닝 알고리즘이 정확히 작동하면 좋겠지만 거의 모든경우에 **High Bias**혹은 **High Variance** 문제가 발생한다. (다른 말로 underfitting problem, overfitting problem) 이 경우에 어떤 문제를 가지고 있는지 알아내는것이 중요하다. 그렇게 해야만 알고리즘을 더 좋은 방향으로 수정할 수 있기 때문이다.
 
 이번 포스팅에서는 bias와 varriance에 대해서 좀 더 알아보고 알고리즘이 bias문제가 있는지 varriance문제가 있는지 평가하는 방법에 대해서 알아본다.

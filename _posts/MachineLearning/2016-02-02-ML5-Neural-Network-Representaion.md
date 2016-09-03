@@ -6,6 +6,9 @@ tag: [Machine Learning, Neural Networks]
 description: 인공 신경망(artificial neural network)에 대해서 알아보고 표현에 대해서 알아보자.
 ---
 
+[Coursera](https://www.coursera.org/)에서 제공하는 [Machine learning by Andrew ng](https://www.coursera.org/learn/machine-learning/) 을 보고 포스팅하였습니다.
+
+---
 이번 포스팅과 그리고 다음에 올릴 포스팅에서 **신경망(Neural Network)** 에 대해서 알아본다. 신경망은 꽤 오래된 아이디어이고 잠시 사람들 관심 밖의 아이디어였지만 오늘날에는 여러 기계학습문제에 관련해서 중요한 축으로 자리잡았다. 우리는 이미 Linear Regression이랑 Logistic regression을 배웠는데 (게다가 교수님이 우리가 많이 안다고 하셨는데) 왜 신경망 알고리즘을 알아야 할까? 다음 예를 보면서 알아보도록 하자.
 
 ## Non-linear Hypotheses

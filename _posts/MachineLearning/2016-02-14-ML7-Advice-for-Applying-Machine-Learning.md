@@ -7,8 +7,9 @@ description: 머신러닝 알고리즘을 실제 문제에 적용할 때 고려�
 
 ---
 
-머신러닝 알고리즘을 실제 문제에 적용할 때 고려할만한 요소에 대해서 알아보자.
+[Coursera](https://www.coursera.org/)에서 제공하는 [Machine learning by Andrew ng](https://www.coursera.org/learn/machine-learning/) 을 보고 포스팅하였습니다.
 
+---
 
 ## Deciding What to Try Next
 

@@ -6,6 +6,9 @@ tag: [Machine Learning, Supervised Learning, Linear Regression]
 description: 변수가 하나인 선형회귀(linear regression)에 대해서 알아보자
 ---
 
+[Coursera](https://www.coursera.org/)에서 제공하는 [Machine learning by Andrew ng](https://www.coursera.org/learn/machine-learning/) 을 보고 포스팅하였습니다.
+
+---
 
 단순 선형 회귀는 하나의 입력에 대한 결과를 예측한다. 이번 포스팅에서는 집값 에측과 비용함수에대한 개념 그리고 gradient descent방법에 대해서 알아본다.
 

@@ -6,6 +6,9 @@ tag: [Machine Learning, Supervised Learning, Linear Regression]
 description: 다중선형회귀에 대해서 알아보자.
 ---
 
+[Coursera](https://www.coursera.org/)에서 제공하는 [Machine learning by Andrew ng](https://www.coursera.org/learn/machine-learning/) 을 보고 포스팅하였습니다.
+
+---
 ## 모델의 표현
 
 변수가 하나인 선형회귀가 아닌 변수(특징)가 여럿인 선형회귀를 알아보자 그 전에 모델을 정의하자

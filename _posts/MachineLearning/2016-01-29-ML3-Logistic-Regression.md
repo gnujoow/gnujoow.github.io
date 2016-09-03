@@ -6,6 +6,9 @@ tag: [Machine Learning, Supervised Learning, Classification, Logistic Regression
 description: Logistic Regression을 통해 classification문제를 푸는 방법을 알아보도록 하자.
 ---
 
+[Coursera](https://www.coursera.org/)에서 제공하는 [Machine learning by Andrew ng](https://www.coursera.org/learn/machine-learning/) 을 보고 포스팅하였습니다.
+
+---
 ## Classification
 
 이메일이 스펨인지 아닌지 온라인 매물이 허위매물인지 아닌지 구분하는 것 처럼 데이터를 어떤 기준에 의해 분류하는 문제를 분류문제(classification problem)이라고 한다. ML::0참고
