@@ -71,3 +71,5 @@ atom에 설치한 ESlint패키지가 설정파일을 불러올 수 있도록 **.
 - [**subicura** linter를 이용한 코딩스타일과 에러 체크하기](http://subicura.com/2016/07/11/coding-convention.html)
 - [**_Jbee** Linter란 무엇인가?](http://asfirstalways.tistory.com/276)
 - [**darokel** Setup ES6+Babel+JSX Linting with Atom](https://gist.github.com/darokel/90fe5c8ad8df5efcab6b)
+- [**wikipedia** Coding conventions](https://en.wikipedia.org/wiki/Coding_conventions)
+- [**wikipedia** Programming style](https://en.wikipedia.org/wiki/Programming_style)
