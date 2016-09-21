@@ -6,7 +6,8 @@ description: atom에서 eslint를 이용하여 깔끔하게 코딩해보자.
 tag: [atom, coding, eslint, linter, es6, javascript]
 ---
 
-이 글을 읽기 전에 읽어보면 좋은 글
+이 글을 읽기 전에 읽어보면 좋은 글  
+
 - [**subicura** linter를 이용한 코딩스타일과 에러 체크하기](http://subicura.com/2016/07/11/coding-convention.html)
 
 코딩을 하다보면 좀더 깔끔한 코드, 코딩스타일이 일관되게 유지되는 코드를 작성하고 싶은 욕심이 생긴다. 짱짱한 회사들의 코딩스타일 문서[[1]](https://github.com/google/styleguide)[[2]](https://github.com/airbnb/javascript)를 살펴보며 평소 나의 코딩 습관과 비교해보고 나름의 노력도 해보지만 남이 보기에도 깔끔하고 일관된 코드를 작성하기란 쉽지 않다.
@@ -35,6 +36,7 @@ Atom은 편집기의 기능을 확장할 수 있도록 여러 패키지들을 �
 규칙들을 하나하나 추가하여 설정을 만들어도 되지만 인터넷에 공개되어있는 짱짱한 회사의 규칙이나 유명한 프로젝트의 규칙을 그대로 가져와서 사용하는 방법도 있다.
 
 ---
+
 # 설치하기
 ![예1](/images/dev/4/1.png)
 atom의 설정에서 install을 클릭하여 [linter-eslint](https://atom.io/packages/linter-eslint)와 [linter](https://atom.io/packages/linter)패키지를 설치한다. 여기까지가 코드 편집기에서 설정의 전부이다. 이제 ESlint가 적절한 규칙들을 불러올 수 있도록 설정해야한다.
