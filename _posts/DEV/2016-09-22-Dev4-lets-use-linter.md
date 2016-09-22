@@ -49,7 +49,7 @@ $ npm install --save-dev eslint-config-airbnb babel-eslint eslint-plugin-react
 {% endhighlight %}
 
 ![예1](/images/dev/4/2.png)
-atom에 설치한 ESlint패키지가 설정파일을 불러올 수 있도록 **.eslintrc** 파일을 프로젝트의 루트폴더에 만들어준다.
+atom에 설치한 ESlint패키지가 설정파일을 불러올 수 있도록 `.eslintrc` 파일을 프로젝트의 루트폴더에 만들어준다.
 
 ![예1](/images/dev/4/3.png)
 **.eslintrc** 파일에 우리가 사용할 규칙을 명시해주면 설정 끝
@@ -58,6 +58,28 @@ atom에 설치한 ESlint패키지가 설정파일을 불러올 수 있도록 **.
 ![예1](/images/dev/4/4.png)
 
 에러 메시지를 [클릭](http://eslint.org/docs/rules/class-methods-use-this)하면 어떤 규칙을 지키지 않았는지 그리고 규칙에 대한 코딩스타일을 볼 수 있다. 이를 보고 다시 수정하면된다.
+
+# 규칙수정하기
+![예1](/images/dev/4/5.png)
+linter와 문서를 보며 정리한 코드 확실히 에러 메시지가 줄었고 코드도 훨씬 깔끔해졌다. 그런데 이 부분의 에러는 문서를 읽어봐도 잘 모르겠고 왜 나는 에러인지 잘 모르는 부분이 있었다.
+
+![예1](/images/dev/4/6.png)
+이렇게 규칙이 빡빡하다고 생각하거나 조정이 필요한 경우 규칙을 수정할 수 있다.
+
+아까 추가한 `.eslintrc`파일에서
+{% highlight json %}
+{
+  "extends": "airbnb",
+  "rules": {
+      "class-methods-use-this": 0
+    }
+}
+{% endhighlight %}
+
+[class-methods-use-this](http://eslint.org/docs/rules/class-methods-use-this) 항목을 0으로 설정하고 다시 코드 에디터에서 에러난 부분을 확인하면
+
+![예1](/images/dev/4/7.png)
+새로운 규칙이 적용되어 에러메시지가 뜨지 않는것을 확인할 수 있다.
 
 ---
 
