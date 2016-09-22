@@ -10,13 +10,13 @@ tag: [atom, coding, eslint, linter, es6, javascript]
 
 - [**subicura** linter를 이용한 코딩스타일과 에러 체크하기](http://subicura.com/2016/07/11/coding-convention.html)
 
-코딩을 하다보면 좀더 깔끔한 코드, 코딩스타일이 일관되게 유지되는 코드를 작성하고 싶은 욕심이 생긴다. 짱짱한 회사들의 코딩스타일 문서[[1]](https://github.com/google/styleguide)[[2]](https://github.com/airbnb/javascript)를 살펴보며 평소 나의 코딩 습관과 비교해보고 나름의 노력도 해보지만 남이 보기에도 깔끔하고 일관된 코드를 작성하기란 쉽지 않다.
+코딩을 하다보면 좀더 깔끔한 코드, 코딩스타일이 일관되게 유지되는 코드를 작성하고 싶은 욕심이 생기게됩니다. 짱짱한 회사들의 코딩스타일 문서[[1]](https://github.com/google/styleguide)[[2]](https://github.com/airbnb/javascript)를 살펴보며 평소 나의 코딩 습관과 비교해보고 나름의 노력도 해보지만 남이 보기에도 깔끔하고 일관된 코드를 작성하기란 쉽지 않습니다 ㅠㅠ.
 
-특히 프로젝트를 진행할 때 각자 다른 코딩스타일을 가진 사람들이 코드를 작성하다보면 코드를 리뷰하거나 유지/보수할 때 어려움이 생긴다. 나름의 규칙도 만들고 규칙을 문서화해서 노력해보지만 <del>특히 내 경우에</del> 평소의 습관이 종종 튀어나와 일관성을 해칠 때가 있다.
+특히 프로젝트를 진행할 때 각자 다른 코딩스타일을 가진 사람들이 코드를 작성하다보면 코드를 리뷰하거나 유지/보수할 때 어려움이 생기게 되는데, 나름의 규칙도 만들고 규칙을 문서화해서 노력해보지만 <del>특히 내 경우에</del> 평소의 습관이 종종 튀어나와 일관성을 해칠 때가 많았습니다.
 
-최근에 **udemy** 에서 [**reactjs** 수업](https://www.udemy.com/react-redux/learn/v4/content)을 듣고 있었는데 **ESlint** 에 대해 다룬 [동영상](https://www.youtube.com/playlist?list=PL9f8_QifuTL4CS8-OyA-4WADhkddOnRS4)이 공개되었다. 이 동영상을 바탕으로 atom 코드 편집기에서 eslint를 설치하고 현재 진행하고 있는 ReactJS프로젝드의 코드를 깔끔하게 작성하는 과정에 대해서 정리해본다
+**udemy** 에서 [**reactjs** 수업](https://www.udemy.com/react-redux/learn/v4/content)을 보면서 공부하고 있는데 최근에 강의 하시는 [Stephen Grider](https://github.com/StephenGrider)님이 **ESlint** 에 대해 다룬 [동영상](https://www.youtube.com/playlist?list=PL9f8_QifuTL4CS8-OyA-4WADhkddOnRS4)을 공개했습니다. 이번 포스팅에서는 이 동영상을 바탕으로 atom 코드 편집기에서 eslint를 설치하고 현재 진행하고 있는 [ReactJS 프로젝드](https://github.com/gnujoow/shim)의 코드를 깔끔하게 작성하는 과정에 대해서 정리해보도록 하겠습니다.
 
-[atom](https://atom.io/)을 주로 사용하여 코딩을 하고 있으므로 atom을 중심으로 정리한다. sublime text, vs code, webstorm을 사용하시는 분들은 **reference** 에 있는 링크를 확인하시면 됩니다.
+sublime text, vs code, webstorm을 사용하시는 분들은 **reference** 에 있는 링크를 확인하시면 됩니다.
 
 ---
 
@@ -62,12 +62,14 @@ atom에 설치한 ESlint패키지가 설정파일을 불러올 수 있도록 **.
 ---
 
 # 마치며
-처음으로 linter를 설치하고 규칙을 적용하여 코딩을 해봤다. linter를 설치하고 규칙을 설정하고 그리고 규칙에 맞게 코딩하는 과정이 고되긴 하지만 코딩스타일이 훨씬 깔끔해진것 같고 유지보수하기 편해진 코드가 된것같아 자신감이 조금 상승했다.
+난생 처음으로 linter를 설치하고 규칙을 적용하여 코딩을 해보았습니다.  
+linter를 설치하고 규칙을 설정하고 그리고 규칙에 맞게 코딩하는 과정이 고되긴 하지만 코딩스타일이 훨씬 깔끔해진것 같고 유지보수하기 편해진 코드가 된것같아 자신감이 조금 상승한것 같네요 :)
 <del>코딩 잘 하고 싶다.</del>
 
 ---
 
 ## reference
+- [**Rally Coding** ESLint Overview and Setup](https://www.youtube.com/playlist?list=PL9f8_QifuTL4CS8-OyA-4WADhkddOnRS4)
 - [**subicura** linter를 이용한 코딩스타일과 에러 체크하기](http://subicura.com/2016/07/11/coding-convention.html)
 - [**_Jbee** Linter란 무엇인가?](http://asfirstalways.tistory.com/276)
 - [**darokel** Setup ES6+Babel+JSX Linting with Atom](https://gist.github.com/darokel/90fe5c8ad8df5efcab6b)
