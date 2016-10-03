@@ -81,6 +81,19 @@ linter와 문서를 보며 정리한 코드 확실히 에러 메시지가 줄었
 ![예1](/images/dev/4/7.png)
 새로운 규칙이 적용되어 에러메시지가 뜨지 않는것을 확인할 수 있다.
 
+지금 현재 적용하여 사용하고 있는 규칙은 아래와 같습니다.
+
+{% highlight json %}
+{
+  "extends": "airbnb",
+  "rules": {
+      "class-methods-use-this": 0,
+      "comma-dangle": 0,
+      "react/prop-types": 0
+    }
+}
+{% endhighlight %}
+
 ---
 
 # 마치며
