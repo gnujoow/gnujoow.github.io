@@ -1,0 +1,209 @@
+---
+layout: post
+title: ES6 array helper method들을 알아보자
+category: [Dev]
+description: 알아두면 두고두고 편하게 쓸 수 있는 es6의 array helper method들의 사용법에 대해서 알아보자.
+tag: [es6]
+---
+
+이 글은 ES6를 막 공부하기 시작한 사람이 공부한 내용을 정리하고 작성한 글입니다. 따라서 내용이 정확하지 않을 수 있습니다. 글에 오류가 있으면 따끔하게 지적해주세요!
+
+---
+
+ES6에는 배열(array)을 처리 할 수 있는 여러 함수들이 있다. ES5에서 넘어온 함수들도 있고 [loadash](https://lodash.com/)와 같은 라이브러리 함수에서 아이디어를 얻어 추가된 함수들도 있습니다.
+
+핼퍼 메소드들을 사용하지 않고 for loop를 사용하여 원하는 기능을 직접 구현할 수 있지만 <del>개인적인 생각으론</del> 헬퍼 메소드들을 이용하면 더 쉽게 자료들을 처리 할 수 있고 길어지는 코드에서 개발자의 실수를 줄일수 있다는 장점이 있습니다.
+
+이번 포스팅에서 다룰 메소드들은 다음과 같습니다.
+
+- [forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+- [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
+- [filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
+- [find](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find)
+
+<!--
+- every
+- some
+- reduce
+-->
+---
+
+## [forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+> The **forEach()** method executes a provided function once per array element.
+
+과일이 모여있는 배열을 출력하는 자바스크립트 코드는 다음과 같이 작성할 수 있습니다.
+{% highlight javascript linenos %}
+var fruits = ['apple','banana','peach','blue berry'];
+
+for(var i = 0 ; i < fruits.length ; i++) {
+  console.log(fruits[i]);
+}
+{% endhighlight %}
+
+[for](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for) 반복문을 사용하면 위와 같이 배열의 원소들을 출력할 수 있습니다. 이때 배열의 반복은 [array.length](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length) 번 반복하면 됩니다.
+
+위 코드를 **forEach** 메소드로 다시 구현해보면 아래와 같습니다.
+{% highlight javascript linenos %}
+var fruits = ['apple','banana','peach','blue berry'];
+
+fruits.forEach(function(fruit) { // .forEach((fruit) =>
+  console.log(fruit);
+});
+{% endhighlight %}
+
+**forEach** 는 전달받은 함수를 배열의 각각 원소에대해서 실행하므로 다음과 같이 사용할 수 있습니다.
+
+
+{% highlight javascript linenos %}
+function addComment(comment){
+  //어떤 함수
+  ...
+}
+
+var comments = [
+  { id: 3, content: '굿 모닝' },
+  { id: 6, content: '좋은 아침이네요' },
+  { id: 10, content: '아침에는 시원한 물 한잔' }];
+
+
+// for loop사용
+for (var i = 0; i < posts.length; i++) {
+  addComment(comments[i]);
+}
+
+//forEach 사용
+comments.forEach(addComment);
+{% endhighlight %}
+
+---
+
+## [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
+> The **map()** method creates a new array with the results of calling a provided function on every element in this array.
+
+과일이름이 들어있는 배열에서 각각 원소에 *juice* 라는 문자열을 덧붙여 새로운 배열을 만든다면 아래와 같이 구현할 수 있습니다.
+
+{% highlight javascript linenos %}
+var fruits = ['apple','banana','peach','blue berry'];
+var juice = [];
+
+for(var i = 0 ; i < fruits.length ; i++){
+	juice.push(fruits[i]+' juice');
+}
+{% endhighlight %}
+
+**map** 을 사용하면 아래와 같이 구현 할 수 있습니다.
+{% highlight javascript linenos %}
+var fruits = ['apple','banana','peach','blue berry'];
+
+var juice = fruits.map(function(fruit) { // .map((fruit) =>
+	return fruit + ' juice';
+});
+{% endhighlight %}
+
+**map** 은 각각 배열 원소들에 대해서 전달받은 함수를 호출하고 그 결과를 모아서 새로운 배열을 만듭니다. 이때 return이 없는 함수인 경우 원래 배열의 원소 갯수만큼 undefined로 채워진 배열이 만들어집니다.
+
+{% highlight javascript linenos %}
+var comments = [
+  { id: 3, content: '굿 모닝' },
+  { id: 6, content: '좋은 아침이네요' },
+  { id: 10, content: '아침에는 시원한 물 한잔' }];
+
+var idx = comments.map( comment => {
+    return comment.id;
+});
+{% endhighlight %}
+
+위와 같이 객체로 이루어진 배열에서 특정원소의 멤버 변수로만 이루어진 배열을 만들때도 사용할 수 있습니다.
+개인적인 경험으로는 map함수가 reactJS 코딩을 할 때 자주 사용되더라구요
+
+---
+
+## [filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
+
+> The filter() method creates a new array with all elements that pass the test implemented by the provided function.
+
+객체 배열에서 어떤 특정 조건에 맞는 원소들로만 배열을 만들려면 아래와 같이 구현할 수 있습니다.
+
+{% highlight javascript linenos %}
+var datas = [
+  { id: 3, type: 'comment', content: '굿 모닝'},
+  { id: 6, type: 'post', content: '좋은 아침이네요' },
+  { id: 10, type: 'comment' ,content: '아침에는 시원한 물 한잔' },
+  { id: 6, type: 'post', content: '공부하기 싫어요' }];
+
+var filteredData = [];
+
+for(var i = 0 ; i < datas.length ; i++){
+  if (datas[i].type === 'post'){
+    filteredData.push(datas[i]);
+  }
+}
+{% endhighlight %}
+
+**filter** 를 사용하면 위 내용을 아래와 같이 구현할 수 있습니다.
+
+{% highlight javascript linenos %}
+var filteredData = datas.filter( data => {
+  return data.type === 'post';
+});
+{% endhighlight %}
+
+**filter** 함수는 각각 배열의 원소에 대해서 전달받은 함수의 결과가 true를 반환한 원소들로만 배열을 만듭니다.
+
+다음 예제처럼 조건이 여러개일 경우 논리 연산자를 조합해서 사용할 수 있다. data에서 like가 5개 이상인 comment만 골라낸다면 다음과 같이 구현할 수 있습니다.
+
+{% highlight javascript linenos %}
+var datas = [
+  { id: 3, type: 'comment', content: '굿 모닝', like: 1},
+  { id: 6, type: 'comment', content: '좋은 아침이네요' , like: 5},
+  { id: 7, type: 'comment', content: '공부하기 싫어요' , like: 30},
+  { id: 10, type: 'comment' ,content: '아침에는 시원한 물 한잔' , like: 10},
+  { id: 15, type: 'comment', content: '저는 공부가 좋은데요?' , like: 0},
+  { id: 16, type: 'comment', content: '여기 이상한 사람이 있어요' , like: 15}];
+
+var filteredData = datas.filter( data => {
+  return data.type === 'comment'&& data.like > 5;
+});
+{% endhighlight %}
+
+---
+
+## [find](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find)
+> The find() method returns a value in the array, if an element in the array satisfies the provided testing function. Otherwise undefined is returned.
+
+배열에서 특정 값을 검색할 때 어떤식으로 하시나요? 저는 주로 아래와 같은 방법으로 구현합니다. 아래와 같은 객체배열이 있고 id가 10인 객체를 찾는다고 하면
+{% highlight javascript linenos %}
+var datas = [
+  { id: 3, type: 'comment', content: '굿 모닝', like: 1},
+  { id: 6, type: 'comment', content: '좋은 아침이네요' , like: 5},
+  { id: 7, type: 'comment', content: '공부하기 싫어요' , like: 30},
+  { id: 10, type: 'comment' ,content: '아침에는 시원한 물 한잔' , like: 10},
+  { id: 15, type: 'comment', content: '저는 공부가 좋은데요?' , like: 0},
+  { id: 16, type: 'comment', content: '여기 이상한 사람이 있어요' , like: 15}];
+
+var ret;
+for(var i = 0 ; i < datas.length ; i++){
+	if( datas[i].id === 10){
+    ret = datas[i];
+    break;
+  }
+}
+{% endhighlight %}
+
+처럼 구현할 수 있습니다. es6에 추가된 **find** 를 사용하면 위 내용을 좀 더 쉽게 구현할 수 있습니다.
+
+{% highlight javascript linenos %}
+var ret = datas.find( data => {
+	return data.id === 10;
+});
+{% endhighlight %}
+
+**filter** 와 비슷해보이는데 filter와 find와 가장 큰 차이점은 find함수는 배열 원소에 대해서 주어진 함수연산을 하다가 함수가 true를 반환하면 find함수도 같이 종료됩니다. **for** 로 구현한 예제의 13행의 break;와 같이 동작한다고 이해하고 있습니다.
+
+find함수로 조건에 만족하는 원소를 반환하지 못하는 경우 **undefined** 를 반환합니다.
+
+---
+
+## reference
+- [**hacks** *Jason Orendorff* ES6 In Depth: Iterators and the for-of loop](https://hacks.mozilla.org/2015/04/es6-in-depth-iterators-and-the-for-of-loop/)
+- [**MDN** Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
