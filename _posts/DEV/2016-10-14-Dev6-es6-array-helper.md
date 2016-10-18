@@ -275,6 +275,7 @@ var sum = scores.reduce((sum, number) => sum + number,0);
 
 0은 initial value로서 누산값의 초기값을 의미합니다.
 
+아래 예제는 reduce와 find를 이용하여 중복되는 원소들을 제외하고 새로 배열을 만드는 과정입니다.
 {% highlight javascript linenos %}
 const numbers = [1, 1, 2, 3, 4, 4];
 
