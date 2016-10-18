@@ -269,6 +269,40 @@ reducer를 이용하면 아래와 같이 구현할 수 있습니다.
 var sum = scores.reduce((sum, number) => sum + number,0);
 {% endhighlight %}
 
+**reduce** 는 배열의 각 원소에 대해서 첫번째 원소부터 마지막 원소 순으로 연산한 값이 줄도록 함수를 적용합니다.
+
+이를테면 위 예제에서 (((( 1 + 2 ) + 3 ) + 4 ) + 5) 순으로 연산을 하게 됩니다.
+
+0은 initial value로서 누산값의 초기값을 의미합니다.
+
+{% highlight javascript linenos %}
+const numbers = [1, 1, 2, 3, 4, 4];
+
+function unique(array) {
+  return array.reduce((a,b) => {
+    let isIn = a.find(element => {
+    	return element === b;
+    });
+    if(!isIn){
+      a.push(b);
+    }
+    return a;
+  },[]);
+}
+
+let ret = unique(numbers);
+{% endhighlight %}
+
+결과
+
+{% highlight text %}
+[1,2,3,4]
+{% endhighlight %}
+
+---
+
+지금까지 ES6에서 자주 사용되는 array helper methods들을 공부한 내용을 정리해 보았습니다. 포스팅을 위해 [MDN]((https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)을 보면서 느낀거지만 대부분의 함수들이 ECMAScript5.1에서 사용할 수 있고 ES6에 새로추가된 것은 find뿐이네요. 확실히 정리를 하고나니 함수에 대한 이해가 더 넓어진것 같습니다. 다음 포스팅에서는 ES6의 **const**, **let**, **var** 에 대해서 포스팅 해보겠습니다.
+
 ---
 ## reference
 - [**hacks** *Jason Orendorff* ES6 In Depth: Iterators and the for-of loop](https://hacks.mozilla.org/2015/04/es6-in-depth-iterators-and-the-for-of-loop/)
