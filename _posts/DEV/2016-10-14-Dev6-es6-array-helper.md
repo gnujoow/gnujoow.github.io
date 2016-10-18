@@ -20,12 +20,10 @@ ES6에는 배열(array)을 처리 할 수 있는 여러 함수들이 있다. ES5
 - [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 - [filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
 - [find](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find)
+- [every](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every)
+- [some](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some)
+- [reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
 
-<!--
-- every
-- some
-- reduce
--->
 ---
 
 ## [forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
@@ -98,6 +96,11 @@ var fruits = ['apple','banana','peach','blue berry'];
 var juice = fruits.map(function(fruit) { // .map((fruit) =>
 	return fruit + ' juice';
 });
+{% endhighlight %}
+
+좀 더 ES6스럽게 코드를 작성한다면 아래와 같이 작성합니다.
+{% highlight javascript linenos %}
+var juice = fruits.map(fruit => `${fruit} juice`);
 {% endhighlight %}
 
 **map** 은 각각 배열 원소들에 대해서 전달받은 함수를 호출하고 그 결과를 모아서 새로운 배열을 만듭니다. 이때 return이 없는 함수인 경우 원래 배열의 원소 갯수만큼 undefined로 채워진 배열이 만들어집니다.
@@ -204,6 +207,69 @@ find함수로 조건에 만족하는 원소를 반환하지 못하는 경우 **u
 
 ---
 
+## [every](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every)
+> The **every()** method tests whether all elements in the array pass the test implemented by the provided function.
+
+배열의 값들이 어떤 기준에 맞는지 검사하기 위해서는 아래와 같은 코드를 작성합니다.
+
+{% highlight javascript linenos %}
+var scores = [
+  { subject: '국어', point: '100'},
+  { subject: '영어', point: '90'},
+  { subject: '수학', point: '80'},
+  { subject: '컴퓨터', point: '10'}];
+
+var pass = true;
+
+for(var i = 0 ; i < scores.length ; i++){
+  if(scores[i].point < 70){
+    pass = false;
+  }
+}
+{% endhighlight %}
+
+**every** 는 배열의 모든 원소들이 제공된 함수로 구현된 테스트를 통과하는지 검사합니다. 배열의 원소들에 대해서 함수를 실행하게 되고 함수가 false를 리턴하게 되면 every는 false를 리턴하게됩니다.
+
+{% highlight javascript linenos %}
+var pass = scores.every( score => {
+	return score.point > 70;
+});
+{% endhighlight %}
+
+---
+
+## [some](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some)
+> The some() method tests whether some element in the array passes the test implemented by the provided function.
+
+위 **every** 예제에서는 모든 과목이 70점보다 높아야만 pass가 true가 반환되는 코드를 작성했습니다. 한 과목이라도 70보다 높을때 true를 반환하고자 할 때는 **some** 을 사용하면 됩니다.
+
+{% highlight javascript linenos %}
+var pass = scores.some( score => {
+	return score.point > 70;
+});
+{% endhighlight %}
+
+---
+
+## [reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
+> The **reduce()** method applies a function against an accumulator and each value of the array (from left-to-right) to reduce it to a single value.
+
+배열 원소값의 합을 구하기 위해서는 아래와 같은 코드를 작성하게 됩니다.
+
+{% highlight javascript linenos %}
+var scores = [1,2,3,4,5];
+var sum = 0;
+for(var i = 0 ; i < scores.length ; i++){
+  sum += scores[i];
+}
+{% endhighlight %}
+
+reducer를 이용하면 아래와 같이 구현할 수 있습니다.
+{% highlight javascript linenos %}
+var sum = scores.reduce((sum, number) => sum + number,0);
+{% endhighlight %}
+
+---
 ## reference
 - [**hacks** *Jason Orendorff* ES6 In Depth: Iterators and the for-of loop](https://hacks.mozilla.org/2015/04/es6-in-depth-iterators-and-the-for-of-loop/)
 - [**MDN** Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
