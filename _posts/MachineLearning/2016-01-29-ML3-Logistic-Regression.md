@@ -9,6 +9,7 @@ description: Logistic Regression을 통해 classification문제를 푸는 방법
 [Coursera](https://www.coursera.org/)에서 제공하는 [Machine learning by Andrew ng](https://www.coursera.org/learn/machine-learning/) 을 보고 포스팅하였습니다.
 
 ---
+
 ## Classification
 
 이메일이 스펨인지 아닌지 온라인 매물이 허위매물인지 아닌지 구분하는 것 처럼 데이터를 어떤 기준에 의해 분류하는 문제를 분류문제(classification problem)이라고 한다. ML::0참고
@@ -17,17 +18,19 @@ description: Logistic Regression을 통해 classification문제를 푸는 방법
 
 ![](/assets/posts/MachineLearning/ml3-0.png)
 
-종양 크기에 따라 악성종양인지 아닌지 구분하였다. 앞서 배운 Linear regression으로 모델을 표현하는 가설함수를 만들면 아마 빨간색 실선이 될 것이다. 이 문제에 대해서 예측을 하려고 한다면 가설함수의 y축이 0.5보다 크면 악성, 0.5보다 작으면 악성이 아님으로 기준을 잡을 수 있다.
+종양 크기에 따라 악성종양인지 아닌지 구분하였다. 앞서 배운 Linear regression으로 모델을 표현하는 가설함수를 만들면 아마 분홍색 실선이 될 것이다. 이 문제에 대해서 예측을 하려고 한다면 가설함수의 y축이 0.5보다 크면 악성, 0.5보다 작으면 악성이 아님으로 기준을 잡을 수 있다.
 
 ![](/assets/posts/MachineLearning/ml3-1.png)
 
 이 모델에 오른쪽에 파란색 화살표로 표시한 원소를 하나 추가 시키자. 딱히 이 모델이 바뀌진 않았지만 이 모델을 가장 잘 표현하기 위해 비용함수(cost function)의 값이 작아지는 쪽으로 가설함수가 만들어질 것이고 그렇다면 위의 파란색 실선처럼 가설함수를 표현할 수 있다. 앞에서 했던것과 같이 한계점(threshold)를 0.5로 잡으면 가설함수의 y축이 0.5가 되는 x의 좌표를 기준으로 데이터들을 분류(classify)할 수 있을것이다. 그렇게 된다면 경우에 따라, 특히 이 경우에는 잘못 분류되는 데이터들이 생기게 된다. 이 경우 linear regression을 적용했을때 나타나는 안좋은 경우 중 하나이다.
 
-경우에 따라 운이 좋아서ㅋ linear regression이 모델을 잘 표현할 때도 있지만 보통은 그렇지 않으므로 Andrew Ng교수님은 classification문제에 linear regression을 사용하지 않는다고 하신다.
+경우에 따라 운이 좋아서 linear regression이 모델을 잘 표현할 때도 있지만 보통은 그렇지 않으므로 Andrew Ng교수님은 classification문제에 linear regression을 사용하지 않는다고 하신다.
 
 만약 classcification을 통해 y가 0 또는 1 로 분류하고 싶을 때 linear regression의 가설함수 h(x)는 0보다 작거나 1보다 큰 경우가 있어 적절하지 않다.
 
-따라서 **가설함수(hypothesis function)** 의 값이 0과 1사이인 **Logistic Regression** 에 대해서 알아보도록 하자. Regression이란 이름이 나와서 당황스러울수도 있지만 Logistic Regression 알고리즘은 사실 classification문제에 사용하는 알고리즘 중 하나이다.
+이 문제를 해결하기 위해 **가설함수(hypothesis function)** 의 값이 0과 1사이인 **Logistic Regression** 에 대해서 알아보도록 하자. Regression이란 이름이 나와서 당황스러울수도 있지만 Logistic Regression 알고리즘은 사실 classification문제에 사용하는 알고리즘 중 하나이다.
+
+---
 
 ## Hypothesis Representation
 
@@ -211,7 +214,7 @@ J(\theta) = - \frac{1}{m} \displaystyle \sum_{i=1}^m [y^{(i)}\log (h_\theta (x^{
 
 등 다양한 알고리즘이 존재한다.
 
-Gradient descent알고리즘과 비교했을 때 위 세 알고리즘의 장점은 \\(\alpha\\)(learning rate)를 선택하지 않아도 된다는 점과 gradient descent알고리즘보다 빠른경우가 많기 때문이다. 단점은 알고리즘이 gradient descent보다 복잡하지만 우리는 라이브러리를 사용하면 되기떄문에 다행이다. ㅋ_ㅋ
+Gradient descent알고리즘과 비교했을 때 위 세 알고리즘의 장점은 \\(\alpha\\)(learning rate)를 선택하지 않아도 된다는 점과 gradient descent알고리즘보다 빠른경우가 많기 때문이다. 단점은 알고리즘이 gradient descent보다 복잡하지만 구현에 있어 많은 머신러닝 라이브러리에 관련 알고리즘이 구현되어 있으므로 해당 알고리즘을 사용하면 된다.
 
 ## Multiclass Classification:One vs All
 
@@ -233,10 +236,6 @@ One vs All은 n개의 원소에 대해서 n+1개의 binary classification 문제
 </div>
 
 가 된다.
-
-
-이번 포스팅은 너무 날림으로 한 것같다. ㅠㅠ
-
 
 ---
 

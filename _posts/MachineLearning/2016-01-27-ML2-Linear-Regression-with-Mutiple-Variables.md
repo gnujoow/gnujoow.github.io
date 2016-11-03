@@ -9,6 +9,7 @@ description: 다중선형회귀에 대해서 알아보자.
 [Coursera](https://www.coursera.org/)에서 제공하는 [Machine learning by Andrew ng](https://www.coursera.org/learn/machine-learning/) 을 보고 포스팅하였습니다.
 
 ---
+
 ## 모델의 표현
 
 변수가 하나인 선형회귀가 아닌 변수(특징)가 여럿인 선형회귀를 알아보자 그 전에 모델을 정의하자
@@ -143,7 +144,7 @@ h(x) = \theta_0 + \theta_1 집의 가로폭 + \theta_2 집의세로폭
 $$
 </div>
 
-하지만 이렇게 접근하기 보다는 새로운 특성 **넓이** 를 만들어 접근하는게 더 낫다. 이를테면 넓이는 가로와 세로의 곱이니까 새로운 특징으로 가설함수를 만들면
+하지만 이렇게 접근하기 보다는 새로운 특성 **넓이** 를 만들어 접근하는것이 문제를 더 쉽게 만들수 있다. 이를테면 넓이는 가로와 세로의 곱이니까 새로운 특징으로 가설함수를 만들면
 
 <div>
 $$
@@ -166,9 +167,9 @@ $$
 
 몇몇 선형회귀 문제에 대해서 **normal equation** 를 이용하면 최적의 \\( \theta \\)값을 찾기 수월하다.
 
-전역 최소점(global minimum)을 찾기 위해서 gradient algorithm을 사용했다. 알고리즘이 반복적으로 연산하면 점점 \\( \theta \\)값에 근접하게되고 최소값을 얻을 수 있다.
+전역 최소점(global minimum)을 찾기 위해서 gradient descent 알고리즘을 사용했다. 알고리즘이 반복적으로 연산하면 점점 \\( \theta \\)값에 근접하게되고 최소값을 얻을 수 있다.
 
-이와 다르게 Normal equation은 \\( \theta\\)를 분석적으로 계산하여 얻는다. 그러니까 반복적으로 계산하는 gradient descent알고리즘과 달리 최소점을 단 한번의 계산으로 얻을 수 있다. 짱!
+이와 다르게 Normal equation은 \\( \theta\\)를 분석적으로 계산하여 얻는다. 그러니까 반복적으로 계산하는 gradient descent 알고리즘과 달리 최소점을 단 한번의 계산으로 얻을 수 있다. 짱!
 
 ![예](/assets/posts/MachineLearning/ml2-5.png)
 
