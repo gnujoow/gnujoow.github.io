@@ -20,9 +20,11 @@ tag: [ReactJS, ES6, Mocha, Chai, TDD, Test]
 각각의 프레임워크와 라이브러리는 홈페이지에서 다음과 같이 소개하고 있다.
 
 [MochaJs](https://mochajs.org/)
+
 > **Mocha** is a feature-rich JavaScript test framework running on [Node.js](https://nodejs.org/ko/) and in the browser, making asynchronous testing simple and fun. **Mocha** tests run serially, allowing for flexible and accurate reporting, while mapping uncaught exceptions to the correct test cases.
 
 [ChaiJS](http://chaijs.com/)
+
 > **Chai** is a BDD / TDD assertion library for node and the browser that can be delightfully paired with any javascript testing framework.  
 **Chai** has several interfaces that allow the developer to choose the most comfortable. The chain-capable BDD styles provide an expressive language & readable style, while the TDD assert style provides a more classical feel.
 
