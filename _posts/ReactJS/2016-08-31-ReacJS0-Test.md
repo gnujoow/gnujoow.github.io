@@ -44,6 +44,7 @@ $ npm install --save-dev chai chai-jquery jquery jsdom mocha react-addons-test-u
 우리가 작성한 reactJS 컴포넌트들은 [webpack](https://webpack.github.io/)으로 빌드되어 `bundle.js` 하나의 파일로 만들어진다. 이 파일은 **browser** 에서 실행된다. 하지만 우리가 테스트를 실행하는 환경은 **terminal** 이므로 테스트가 진행될 command line 환경인 terminal에서 마치 브라우저에서 실행되는것 처럼 환경을 만들어야한다.
 
 이를 위해 [**jsdom**](https://github.com/tmpvar/jsdom)을 설치한다.
+
 > A JavaScript implementation of the WHATWG DOM and HTML standards, for use with Node.js.  
 
 [**jsdom**](https://github.com/tmpvar/jsdom)은 terminal에서 `bundle.js`가 실행되는것 처럼 시뮬레이팅(?)하는 도구이다.

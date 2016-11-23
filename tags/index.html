@@ -8,9 +8,7 @@ title: Tags
   <li style="list-style:none;
   			display:inline;
   			font-size: {{ tag | last | size | times: 100 | divided_by: site.tags.size | plus: 70  }}% ">
-    <a href="#{{ tag | first | slugize }}">
-      <code>#{{ tag | first }}</code>
-    </a>
+    <a href="#{{ tag | first | slugize }}" class="tag">{{ tag | first }}</a>
   </li>
 {% endfor %}
 </ul>
@@ -33,11 +31,13 @@ title: Tags
 {% for tag in site.tags %}
   <div class="archive-group">
     {% capture tag_name %}{{ tag | first }}{% endcapture %}
-    <h3 id="#{{ tag_name | slugize }}">{{ tag_name }}</h3>
+    <h3 id="#{{ tag_name | slugize }}" class="tag">{{ tag_name }}</h3>
+    <br />
     <a name="{{ tag_name | slugize }}"></a>
     {% for post in site.tags[tag_name] %}
-      <a href="{{ root_url }}{{ post.url }}">{{post.title}}</a> / 
+      <a href="{{ root_url }}{{ post.url }}">{{post.title}}</a> /
     {% endfor %}
   </div>
+  <hr />
 {% endfor %}
 </div>
