@@ -14,26 +14,16 @@ title: Tags
 </ul>
 
 <hr>
-  <!-- 광고 -->
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <!-- react -->
-  <ins class="adsbygoogle"
-       style="display:block"
-       data-ad-client="ca-pub-1377383149600056"
-       data-ad-slot="6480625722"
-       data-ad-format="auto"></ins>
-  <script>
-  (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
+  {% include adsense.html %}
 <hr>
 
 <div id="archives">
 {% for tag in site.tags %}
   <div class="archive-group">
     {% capture tag_name %}{{ tag | first }}{% endcapture %}
+    <a name="{{ tag_name | slugize }}"></a>
     <h3 id="#{{ tag_name | slugize }}" class="tag">{{ tag_name }}</h3>
     <br />
-    <a name="{{ tag_name | slugize }}"></a>
     {% for post in site.tags[tag_name] %}
       <a href="{{ root_url }}{{ post.url }}">{{post.title}}</a> /
     {% endfor %}

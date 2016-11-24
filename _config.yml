@@ -7,12 +7,18 @@ description:         "happy coding :)"
 url:                 http://gnujoow.github.io/
 baseurl:             ''
 
-#paginate
 gems:
   - jekyll-paginate
   - jekyll-seo-tag
+  - jekyll-timeago
+
+# paginate
 paginate: 20
 paginate_path: "page:num"
+
+# time ago
+jekyll_timeago:
+  depth: 1
 
 # About/contact
 author:

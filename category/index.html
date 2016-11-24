@@ -4,6 +4,17 @@ title: Category
 ---
 
 {% for category in site.categories %}
+<a href="#{{ category | first }}">
+  <code>{{ category | first }} ({{ category | last | size }})</code>
+</a>
+{% endfor %}
+
+<hr />
+{% include adsense.html %}
+<hr />
+
+{% for category in site.categories %}
+  <a name="{{ category | first }}"></a>
   <a href="#{{ category | first }}">
     <h3 id="#{{ category | first }}">{{ category | first }}</h3>
   </a>
