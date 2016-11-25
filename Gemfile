@@ -9,4 +9,3 @@ gem 'jekyll'
 # Jekyll extensions
 gem 'jekyll-paginate'
 gem 'jekyll-seo-tag'
-gem 'jekyll-timeago'

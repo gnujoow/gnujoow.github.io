@@ -8,7 +8,7 @@ title: Home
   <div>
     <span>
       <font color="#707070" style="font-size: .75rem;">
-        {{ post.date | timeago }}
+        {{ post.date | date: "%Y-%m-%d" }}
       </font>
       <a href="/category/#{{ post.category }}">
         <code>{{ post.category }}</code>
