@@ -1,3 +1,4 @@
+---
 layout: post
 title: 프로그레시브웹앱에 대해서 알아보자
 category: [Dev]
@@ -10,6 +11,7 @@ https://www.ampproject.org/ko/
 프로그레시브 웹엡은 google의 개발자 Alex Russell이 2015년 6월 처음으로 제안한 아이디어라고 한다. [링크](https://arc.applause.com/2015/11/30/application-shell-architecture/)
 
 프로그레시브 웹 앱은 다음과 같은 조건을 만족해야 한다.
+
 - Reliable
   - Load instantly and never show the downasaur, even in uncertain network conditions.
   - 오프라인 상황에서도 빠르게 앱을 로드할 수 있어야한다.
