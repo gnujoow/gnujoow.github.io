@@ -13,16 +13,20 @@ title: About
 
 ---
 
-## contact
+## activity
+  - [Yarn translation in Korean](http://i18n.yarnpkg.com/profile/gnujoow)
 
+---
+
+## contact
 <div>
-<a href="https://kr.linkedin.com/in/wjkim90" style="float: left; width: 33%;">
-  <img src="/assets/img/linkedin.png" />
-</a>
-<a href="http://github.com/gnujoow" style="float: left; width: 33%;">
-  <img src="/assets/img/github.png" />
-</a>
-<a href="mailto:gnujoow.kim@gmail.com" style="float: left; width: 33%;">
-  <img src="/assets/img/email.png" />
-</a>
+  <a href="https://kr.linkedin.com/in/wjkim90" style="float: left; width: 10%;">
+    <img src="/assets/img/linkedin.png" />
+  </a>
+  <a href="http://github.com/gnujoow" style="float: left; width: 10%;">
+    <img src="/assets/img/github.png" />
+  </a>
+  <a href="mailto:gnujoow.kim@gmail.com" style="float: left; width: 10%;">
+    <img src="/assets/img/email.png" />
+  </a>
 </div>
