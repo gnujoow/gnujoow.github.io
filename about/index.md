@@ -4,7 +4,7 @@ title: About
 ---
 
 ## 김우정
-  - work for [ab180](https://www.airbridge.io/) \o/ 
+  - work for [ab180](https://www.airbridge.io/) (/ @ ~ @)/
   - 알고리즘 문제풀면서 시간 보내는중 acmicpc.net [[푼 문제들]](https://www.acmicpc.net/user/gnujoow)
   - 건국대학교 전자공학부 졸업
   - [건국대학교 멋쟁이사자처럼](https://www.facebook.com/likelionkonkuk/?fref=ts) 4기 건국대학교 운영진
@@ -14,7 +14,9 @@ title: About
 ---
 
 ## activity
-  - [Yarn translation in Korean](http://i18n.yarnpkg.com/profile/gnujoow)
+### translation
+  - [Yarn](http://i18n.yarnpkg.com/profile/gnujoow)
+  - [MDN](https://developer.mozilla.org/ko/profiles/gnujoow)
 
 ---
 
