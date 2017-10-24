@@ -1,4 +1,4 @@
-y---
+---
 layout: post
 title: 0.What is Machine Learning
 category: [ML]
