@@ -1,0 +1,51 @@
+---
+layout: blog
+title: Home
+---
+
+<div class="posts">
+  {% for post in paginator.posts %}
+  <div>
+    <span>
+      <font color="#707070" style="font-size: .75rem;">
+        {{ post.date | date: "%Y-%m-%d" }}
+      </font>
+      <a href="/category/#{{ post.category }}">
+        <code>{{ post.category }}</code>
+      </a>
+      <a href="{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </span>
+  </div>
+  {% endfor %}
+</div>
+
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ site.baseurl }}/blog/page{{paginator.next_page}}">이전 포스트</a>
+  {% else %}
+    <span class="pagination-item older">이전 포스트</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}/">다음 포스트</a>
+    {% else %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}/blog/page{{paginator.previous_page}}">다음 포스트</a>
+    {% endif %}
+  {% else %}
+    <span class="pagination-item newer">다음 포스트</span>
+  {% endif %}
+</div>
+
+<!-- 광고 -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- react -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1377383149600056"
+     data-ad-slot="6480625722"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>

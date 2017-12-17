@@ -48,7 +48,7 @@ body {
 }
 
 html {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Spoqa Han Sans", "Sans-serif", serif;
   font-size: 16px;
   line-height: 1.5;
 }
@@ -150,7 +150,7 @@ abbr[title] {
 /* Code */
 code,
 pre {
-  font-family: Menlo, Monaco, "Courier New", monospace;
+  font-family: "Spoqa Han Sans", "Sans-serif", serif;
 }
 code {
   padding: .25em .5em;
@@ -182,6 +182,7 @@ pre code {
 /* Pygments via Jekyll */
 .highlight {
   margin-bottom: 1rem;
+  margin: 0;
   border-radius: 4px;
 }
 .highlight pre {
@@ -389,7 +390,7 @@ tbody tr:nth-child(odd) th {
   overflow: hidden; /* clearfix */
   margin-left: -1rem;
   margin-right: -1rem;
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-family: "Spoqa Han Sans", "Sans-serif", serif;
   color: #ccc;
   text-align: center;
 }

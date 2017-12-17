@@ -14,7 +14,7 @@ gems:
 
 # paginate
 paginate: 20
-paginate_path: "page:num"
+paginate_path: "/blog/page:num/"
 
 # time ago
 jekyll_timeago:
