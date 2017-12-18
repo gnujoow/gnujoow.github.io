@@ -29,7 +29,7 @@ title: Home
   {% endif %}
   {% if paginator.previous_page %}
     {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}/">다음 포스트</a>
+      <a class="pagination-item newer" href="{{ site.baseurl }}/blog">다음 포스트</a>
     {% else %}
       <a class="pagination-item newer" href="{{ site.baseurl }}/blog/page{{paginator.previous_page}}">다음 포스트</a>
     {% endif %}
