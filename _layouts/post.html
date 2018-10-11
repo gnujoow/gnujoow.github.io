@@ -5,9 +5,10 @@ layout: blog
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
   <span class="post-date">{{ page.date | date_to_string }}</span>
-  {% include adsense.html %}
+  {% include adsense-image.html %}
   <br />
   {{ page.description }}
+  {% include adsense-text.html %}
   <hr />
   {{ content }}
 
@@ -21,7 +22,6 @@ layout: blog
   {% endfor %}
   </div>
 </div>
-
+{% include adsense-image.html %}
 {% include disqus.html %}
-{% include adsense.html %}
 {% include socialSide.html %}
