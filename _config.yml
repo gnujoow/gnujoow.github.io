@@ -11,6 +11,10 @@ gems:
   - jekyll-paginate
   - jekyll-seo-tag
   - jemoji
+  - jekyll-redirect-from
+
+whitelist:
+  - jekyll-redirect-from
 
 # paginate
 paginate: 20

@@ -4,6 +4,7 @@ title: 0.What is Machine Learning
 category: [ML]
 tag: [Machine Learning, Supervised Learning, Unsupervised Learning]
 description: 머신러닝이란 무엇일까? 머신러닝의 종류와 예를 통해 머신러닝이 무엇인지 알아보자.
+redirect_to: https://kimlog.me/machine-learning/2016-01-26-0-What-is-machine-learning/
 ---
 
 [Coursera](https://www.coursera.org/)에서 제공하는 [Machine learning by Andrew ng](https://www.coursera.org/learn/machine-learning/) 을 보고 포스팅하였습니다.
