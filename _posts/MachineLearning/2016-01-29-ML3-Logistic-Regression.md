@@ -4,6 +4,7 @@ title: 3.Logistic Regression
 category: [ML]
 tag: [Machine Learning, Supervised Learning, Classification, Logistic Regression,Multiclass Classification]
 description: Logistic Regression을 통해 classification문제를 푸는 방법을 알아보도록 하자.
+redirect_to: https://kimlog.me/machine-learning/2016-01-29-3-Logistic-Regression/
 ---
 
 [Coursera](https://www.coursera.org/)에서 제공하는 [Machine learning by Andrew ng](https://www.coursera.org/learn/machine-learning/) 을 보고 포스팅하였습니다.

@@ -4,6 +4,7 @@ title: 5.Neural Networks:Representation
 category: [ML]
 tag: [Machine Learning, Neural Networks]
 description: 인공 신경망(artificial neural network)에 대해서 알아보고 표현에 대해서 알아보자.
+redirect_to: https://kimlog.me/machine-learning/2016-02-02-5-Neural-Network-Representaion/
 ---
 
 [Coursera](https://www.coursera.org/)에서 제공하는 [Machine learning by Andrew ng](https://www.coursera.org/learn/machine-learning/) 을 보고 포스팅하였습니다.

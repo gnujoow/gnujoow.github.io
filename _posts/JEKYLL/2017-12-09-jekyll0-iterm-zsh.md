@@ -5,6 +5,7 @@ category: [DEV]
 tag: [iterm, zsh]
 thread: [jekyll-tutorial]
 description: 터미널을 더 간편하게 사용할 수 있게 도와주는 도구들을 설치해보자.
+redirect_to: https://kimlog.me/develop/2017-12-09-iterm-zsh/
 ---
 
 프로그래머가 나오는 영화나 드라마를 보면 프로그래머가 검은화면에서 알 수 없는 명령어를 입력하는것을 볼 수 있다.

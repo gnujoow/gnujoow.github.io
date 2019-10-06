@@ -4,6 +4,7 @@ title: 2.Multivariate Linear Regression
 category: [ML]
 tag: [Machine Learning, Supervised Learning, Linear Regression]
 description: 다중선형회귀에 대해서 알아보자.
+redirect_to: https://kimlog.me/machine-learning/2016-01-28-2-Linear-Regression-with-Mutiple-Variables/
 ---
 
 [Coursera](https://www.coursera.org/)에서 제공하는 [Machine learning by Andrew ng](https://www.coursera.org/learn/machine-learning/) 을 보고 포스팅하였습니다.

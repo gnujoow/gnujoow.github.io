@@ -4,6 +4,7 @@ title: 1.Linear Regression with One Variable
 category: [ML]
 tag: [Machine Learning, Supervised Learning, Linear Regression]
 description: 변수가 하나인 선형회귀(linear regression)에 대해서 알아보자
+redirect_to: https://kimlog.me/machine-learning/2016-01-27-1-Linear-Regression-with-One-Variable/
 ---
 
 [Coursera](https://www.coursera.org/)에서 제공하는 [Machine learning by Andrew ng](https://www.coursera.org/learn/machine-learning/) 을 보고 포스팅하였습니다.
