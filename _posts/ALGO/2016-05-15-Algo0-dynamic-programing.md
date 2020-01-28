@@ -4,6 +4,7 @@ title: dynamic programming
 category: [ALGO]
 tag: [Algorithm, DynamicPrograming, dp, 다이나믹프로그래밍, 분할정복]
 description: 다이나믹 프로그래밍에 대해서 알아보자.
+redirect_to: https://kimlog.me/algorithm/2016-05-15-dynamic-programing.md/
 ---
 
 DP 어렵다. DP잘 하고 싶어서 공부한 내용을 정리해본다.
