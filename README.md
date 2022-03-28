@@ -1,2 +1,2 @@
 
-Blog
+Deprecated Blog
